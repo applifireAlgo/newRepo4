@@ -1,0 +1,35 @@
+Ext.define('Newpro.newpro.shared.com.model.appinsight.health.ItemModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "itemId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "itemname",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "brandnm",
+          "reference": "Brands",
+          "defaultValue": ""
+     }, {
+          "name": "categorynm",
+          "reference": "Category",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

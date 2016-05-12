@@ -8,7 +8,7 @@ Ext.application({
 
     extend: 'Newpro.Application',
     
-    autoCreateViewport: 'Newpro.view.main.Main'
+/**AppPathDetails**/autoCreateViewport:"Newpro.view.desktop.design.drawer.main.MainPanel",
 	
     //-------------------------------------------------------------------------
     // Most customizations should be made to Newpro.Application. If you need to

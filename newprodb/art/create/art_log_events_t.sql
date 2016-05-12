@@ -1,0 +1,4 @@
+CREATE TABLE art_log_events_t ( id varchar2(64) NOT NULL, eventDate TIMESTAMP (0) DEFAULT NULL, alarmId varchar2(15) DEFAULT NULL, customerId varchar2(64) DEFAULT NULL, userId varchar2(64) DEFAULT NULL, userIpAddress varchar2(20) DEFAULT NULL, userPort NUMBER(10) DEFAULT NULL, geoLatitude NUMBER(10,3) DEFAULT NULL, geoLongitude NUMBER(10,3) DEFAULT NULL, sessionId varchar2(64) DEFAULT NULL, requestId varchar2(64) DEFAULT NULL, boundedContextId varchar2(5) DEFAULT NULL, domainId varchar2(5) DEFAULT NULL, className varchar2(500) DEFAULT NULL, methodName varchar2(200) DEFAULT NULL, message varchar2(4000) DEFAULT NULL, exception varchar2(2000) DEFAULT NULL, context NUMBER(5) DEFAULT NULL, severity NUMBER(5) DEFAULT NULL, layer NUMBER(5) DEFAULT NULL, eventAction NUMBER(5) DEFAULT NULL, alarmStatus NUMBER(5) DEFAULT NULL, PRIMARY KEY (id));
+
+exit
+

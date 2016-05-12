@@ -1,0 +1,2 @@
+load data infile '$ART_DATA_PATH/art_log_config_attributes.csv' "str '#appfirenewline#'" into table art_log_config_attributes FIELDS TERMINATED BY '#appfire#' (attribute_id,log_config_id,attribute_name,attribute_value,attribute_comment,attribute_display_name,version_id,created_by,created_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',updated_by,updated_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',active_status)
+
