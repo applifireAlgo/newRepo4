@@ -1116,6 +1116,7 @@ $include-testpro2-testpro2-shared-com-model-appbasicsetup-userrolemanagement-use
 $include-testpro2-testpro2-shared-com-model-appinsight-testtwoqmodel: true;
 $include-testpro2-testpro2-shared-com-model-appinsight-toneqmodel: true;
 $include-testpro2-testpro2-shared-com-model-appinsight-health-adtomodel: true;
+$include-testpro2-testpro2-shared-com-model-appinsight-health-auimodel: true;
 $include-testpro2-testpro2-shared-com-model-appinsight-health-bdtomodel: true;
 $include-testpro2-testpro2-shared-com-model-appinsight-health-testonemodel: true;
 $include-testpro2-testpro2-shared-com-model-appinsight-health-testtwomodel: true;
@@ -1148,8 +1149,8 @@ $include-testpro2-testpro2-shared-com-model-salesboundedcontext-sales-salesdatam
 $include-testpro2-testpro2-shared-com-model-salesboundedcontext-sales-salesregionmodel: true;
 $include-testpro2-testpro2-shared-com-model-salesboundedcontext-sales-useraccessmodel: true;
 $include-testpro2-testpro2-shared-com-viewmodel-appbasicsetup-usermanagement-questionviewmodel: true;
+$include-testpro2-testpro2-shared-com-viewmodel-appinsight-health-auiviewmodel: true;
 $include-testpro2-testpro2-shared-com-viewmodel-appinsight-health-testoneviewmodel: true;
-$include-testpro2-testpro2-shared-com-viewmodel-appinsight-health-testtwoviewmodel: true;
 $include-testpro2-testpro2-shared-com-viewmodel-organization-contactmanagement-communicationgroupviewmodel: true;
 $include-testpro2-testpro2-shared-com-viewmodel-organization-contactmanagement-communicationtypeviewmodel: true;
 $include-testpro2-testpro2-shared-com-viewmodel-organization-contactmanagement-contacttypeviewmodel: true;
@@ -1174,8 +1175,8 @@ $include-testpro2-testpro2-shared-com-viewmodel-salesboundedcontext-sales-retail
 $include-testpro2-testpro2-shared-com-viewmodel-salesboundedcontext-sales-salesdataviewmodel: true;
 $include-testpro2-testpro2-shared-com-viewmodel-salesboundedcontext-sales-salesregionviewmodel: true;
 $include-testpro2-testpro2-web-com-controller-appbasicsetup-usermanagement-questionmaincontroller: true;
+$include-testpro2-testpro2-web-com-controller-appinsight-health-auicontroller: true;
 $include-testpro2-testpro2-web-com-controller-appinsight-health-testonemaincontroller: true;
-$include-testpro2-testpro2-web-com-controller-appinsight-health-testtwomaincontroller: true;
 $include-testpro2-testpro2-web-com-controller-organization-contactmanagement-communicationgroupmaincontroller: true;
 $include-testpro2-testpro2-web-com-controller-organization-contactmanagement-communicationtypemaincontroller: true;
 $include-testpro2-testpro2-web-com-controller-organization-contactmanagement-contacttypemaincontroller: true;
@@ -1200,8 +1201,8 @@ $include-testpro2-testpro2-web-com-controller-salesboundedcontext-sales-retailer
 $include-testpro2-testpro2-web-com-controller-salesboundedcontext-sales-salesdatamaincontroller: true;
 $include-testpro2-testpro2-web-com-controller-salesboundedcontext-sales-salesregionmaincontroller: true;
 $include-testpro2-testpro2-web-com-view-appbasicsetup-usermanagement-questionmain: true;
+$include-testpro2-testpro2-web-com-view-appinsight-health-aui: true;
 $include-testpro2-testpro2-web-com-view-appinsight-health-testonemain: true;
-$include-testpro2-testpro2-web-com-view-appinsight-health-testtwomain: true;
 $include-testpro2-testpro2-web-com-view-organization-contactmanagement-communicationgroupmain: true;
 $include-testpro2-testpro2-web-com-view-organization-contactmanagement-communicationtypemain: true;
 $include-testpro2-testpro2-web-com-view-organization-contactmanagement-contacttypemain: true;

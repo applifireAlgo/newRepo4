@@ -221,7 +221,5 @@ sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/ast_UserAccess_M.sql;
 
 sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/ast_TestOne_T.sql; 
 
-sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/ast_TestTwo_M.sql; 
-
 echo 'create AST table process ends...'
 

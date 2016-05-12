@@ -117,5 +117,3 @@ sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/alter_ast_UserAccess_M.sql;
 
 sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/alter_ast_TestOne_T.sql; 
 
-sqlplus $USER/$PASSWORD @$AST_CREATE_PATH/alter_ast_TestTwo_M.sql; 
-
