@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.app.server.service.appbasicsetup.userrolemanagement.UserRoleBridgeTestCase" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-05T11:43:31" hostname="bb2aa222972f" time="0.699">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.appbasicsetup.userrolemanagement.UserRoleBridgeTestCase" time="0.404"/>
+  <testcase name="test2Update" classname="com.app.server.service.appbasicsetup.userrolemanagement.UserRoleBridgeTestCase" time="0.014"/>
+  <testcase name="test3FindById" classname="com.app.server.service.appbasicsetup.userrolemanagement.UserRoleBridgeTestCase" time="0.006"/>
+  <testcase name="test3findByroleId" classname="com.app.server.service.appbasicsetup.userrolemanagement.UserRoleBridgeTestCase" time="0.007"/>
+  <testcase name="test3findByuserId" classname="com.app.server.service.appbasicsetup.userrolemanagement.UserRoleBridgeTestCase" time="0.008"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.appbasicsetup.userrolemanagement.UserRoleBridgeTestCase" time="0.005"/>
+  <testcase name="test6Delete" classname="com.app.server.service.appbasicsetup.userrolemanagement.UserRoleBridgeTestCase" time="0.252"/>
+  <system-out><![CDATA[Thu May 05 11:43:31 UTC 2016|Log Manager Factory|Initialization Process started.....
+Thu May 05 11:43:31 UTC 2016|Log Manager|Initialized with Path = [/home/applifire/workspace/testlic1/src/main/webapp/WEB-INF/conf/]
+Thu May 05 11:43:31 UTC 2016|Alarm Manager|Initialized with Path = [/home/applifire/workspace/testlic1/src/main/webapp/WEB-INF/conf/]
+Thu May 05 11:43:31 UTC 2016|Alarm Manager|Loading Alarms ......
+Thu May 05 11:43:31 UTC 2016|Alarm XML Parser|FWA|XML Parsing Complete........ 
+Thu May 05 11:43:31 UTC 2016|Alarm File Manager|FWA|Alarm File Status.. [ApplicationFrameworkAlarms.xml]|Version=13|Status=Done 
+Thu May 05 11:43:31 UTC 2016|Alarm File Manager|FWA|Alarm Stats = ( BC/AL=4/242 SYS=4/9 [242/0]  TPL=0/0 [0/0]  APP= A.Map=[320]  E.Map EC/RC=[3/0] )
+Thu May 05 11:43:31 UTC 2016|Alarm XML Parser|APP|XML Parsing Complete........ 
+Thu May 05 11:43:31 UTC 2016|Alarm File Manager|APP|Alarm File Status.. [ApplicationAlarms.xml]|Version=1|Status=Done 
+Thu May 05 11:43:31 UTC 2016|Alarm File Manager|APP|Alarm Stats = ( BC/AL=4/242 SYS=4/9 [242/0]  TPL=0/0 [0/0]  APP=0/0 [0/0]  A.Map=[320]  E.Map EC/RC=[3/0] )
+Thu May 05 11:43:31 UTC 2016|ApplicationAlarmContext| <><><><><> Create App Alarms ....  <><><><><> 
+Thu May 05 11:43:31 UTC 2016|ApplicationAlarmContext|Alarms are generated ONLY in Development Mode.. 
+Thu May 05 11:43:31 UTC 2016|Alarm Manager|APP|Alarm Stats = ( BC/AL=4/242 SYS=4/9 [242/0]  TPL=0/0 [0/0]  APP=0/0 [0/0]  A.Map=[320]  E.Map EC/RC=[3/0] )
+Thu May 05 11:43:31 UTC 2016|Alarm Manager|Initialized Exception Lookup...
+Thu May 05 11:43:31 UTC 2016|Log Manager|Initialize Log Config File ......
+Thu May 05 11:43:31 UTC 2016|Pluggable Connectors|Adding Connectors : StandardOutputConnector isEnabled=true isDefault=false isFallBack=true
+Thu May 05 11:43:31 UTC 2016|Pluggable Connectors|Adding Connectors : StandardFileConnector isEnabled=true isDefault=false isFallBack=false
+Thu May 05 11:43:31 UTC 2016|Pluggable Connectors|Adding Connectors : Sprinkler isEnabled=true isDefault=true isFallBack=false
+Thu May 05 11:43:31 UTC 2016|Pluggable Connectors|Default Connector Name : com.spartan.logger.core.LogMessenger
+Thu May 05 11:43:31 UTC 2016|Log Config Parser|Connector Least Log Level =[4]  FallBack Log Level =[3]
+Thu May 05 11:43:31 UTC 2016|Log Manager|Loading Default Connector for Logging ......
+Thu May 05 11:43:31 UTC 2016|Log Manager|Loading class .. com.spartan.logger.core.LogMessenger
+Thu May 05 11:43:31 UTC 2016|Plugggable Connector|Connector class com.spartan.logger.core.LogMessenger Initialized... @ Log Level = 3
+Thu May 05 11:43:31 UTC 2016|Log Manager|Starting the Default Connector [com.spartan.logger.core.LogMessenger@73bbea20] ....
+Thu May 05 11:43:31 UTC 2016|Scheduler|Starting the Scheduler ......
+Thu May 05 11:43:31 UTC 2016|Scheduler|Adding [LMID=[b7b9ed70-bca7-4957-8aeb-892891e52d62]] Delay=5 Time Unit=MINUTES
+Thu May 05 11:43:31 UTC 2016|Scheduler|Adding [App Alarm Manager File=[ApplicationAlarms.xml]] Delay=30 Time Unit=MINUTES
+Thu May 05 11:43:31 UTC 2016|Scheduler|Adding [FW Alarm Manager File=[ApplicationFrameworkAlarms.xml]] Delay=3 Time Unit=MINUTES
+Thu May 05 11:43:31 UTC 2016|Scheduler|Startup Completed..
+Thu May 05 11:43:31 UTC 2016|Log Manager|Initialization Process Complete ......
+Thu May 05 11:43:31 UTC 2016|Log Manager Factory|Log Manager READY! ID = b7b9ed70-bca7-4957-8aeb-892891e52d62
+[EL Fine]: sql: 2016-05-05 11:43:31.219--ClientSession(157802008)--Connection(842461350)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [7562B51F-8887-4E60-98D2-1655E9F45E07, VVsfF3zUfvm2cMHtvvLMNGsu6NAVdrYKUEiYEq5o8sZxIHFRKp, PtNdfQONWdCcrBrKt7I5f7gJalSEIEYcJjo2vizpZRGg13G5RU, 1c9nkQfR5e5MCz6OFVUdNwMj0mrJUv7mPVBk7igaS1eRE9JiHM, vFotauQtOqFTihcQro2JZ2LurH5sTsdRHyeJ8d2qFXcIQaLK6J, 6126, 1, AAAAA, 2016-05-05 11:43:31.212, AAAAA, 2016-05-05 11:43:31.212, 1, 51000]
+[EL Fine]: sql: 2016-05-05 11:43:31.301--ClientSession(174544549)--Connection(842461350)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [EBF063B2-2102-4064-91B2-8418DFC634F4, CxLhlsMRG19AAGfqn7negt9Zj2oJAICTeIkKWZwhts7ZkBhzd0, ho73qyXqOV6thIas1aJNicR4WiT9jmnQg6ILAHelh7LL2yfdPz, Af3w14VujUy5PUpt3ibU7Q5BSnJTEGhmtaeXRVv1S2dHk7V6A0, WiyrMZPW3S9KV7n3g8vRX3JnBXxEjDhLywejuQdbbfbc9NXkYt, 62960, 1, AAAAA, 2016-05-05 11:43:31.296, AAAAA, 2016-05-05 11:43:31.296, 1, 51000]
+[EL Fine]: sql: 2016-05-05 11:43:31.351--ClientSession(945628849)--Connection(842461350)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Question_M (questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [2D58944B-D892-4A17-8730-08AEFC3ADDDD, 1, Zzid65SQZQwWBFK7kK8z1zNkb2XgVFSFKo1ho8IUubhvxK1slW, cvDxkGcNvH, tlbdJ7v0FVNGsnevPbFLBIYfTdGyZImUGucLRIQRm8Jvbj0qfl, 1, AAAAA, 2016-05-05 11:43:31.346, AAAAA, 2016-05-05 11:43:31.346, 1, 51000]
+[EL Fine]: sql: 2016-05-05 11:43:31.405--ClientSession(433304182)--Connection(842461350)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_User_T (userId, allowMultipleLogin, changePasswordNextLogin, genTempOneTimePassword, isDeleted, isLocked, lastPasswordChangeDate, multiFactorAuthEnabled, passwordAlgo, passwordExpiryDate, sessionTimeout, userAccessCode, userAccessDomainId, userAccessLevelId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [63DD4A03-EE99-4BD6-9D81-4A9EB50CF97E, 1, 1, 1, 1, 1, 2016-05-05 11:01:11.278, 1, nk6mLLAaKNEkUzwhkYJ0egl3MS4ySwA2mjcETRmkBkXAUDvI2X, 2016-05-05 11:01:11.278, 1711, 3788, 7562B51F-8887-4E60-98D2-1655E9F45E07, EBF063B2-2102-4064-91B2-8418DFC634F4, 1, AAAAA, 2016-05-05 11:43:31.212, AAAAA, 2016-05-05 11:43:31.212, 1, 51000]
+[EL Fine]: sql: 2016-05-05 11:43:31.407--ClientSession(433304182)--Connection(842461350)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_PassRecovery_TP (passRecoveryId, answer, questionId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode, userId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [EA14C413-BA3C-4796-B7D0-8542C8997F0E, WU44zP9dxlew6zQrlotb1ie6RhJpjnHsaNuoxX9X7rMHdg94NY, 2D58944B-D892-4A17-8730-08AEFC3ADDDD, 1, AAAAA, 2016-05-05 11:43:31.346, AAAAA, 2016-05-05 11:43:31.346, 1, 51000, 63DD4A03-EE99-4BD6-9D81-4A9EB50CF97E]
+[EL Fine]: sql: 2016-05-05 11:43:31.408--ClientSession(433304182)--Connection(842461350)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserData_TP (userDataId, last5Passwords, oneTimePassword, oneTimePasswordExpiry, oneTimePasswordGenDate, password, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode, userId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [6697E051-6238-49D8-908F-921222C1ABE5, ksI3oGCIQi0apJgggKRYibG7UIlllCFdeoK7c5bo16fK71gVZF, OP6z9BP6yv4VuEOYK3AyNqrH6aZuNPkg, 6, 2016-05-05 11:01:11.502, cbDMJOUVLR2P0astZIBt9SffTSXhaJ4MPmjI6UDaCPRhR1hflz, 1, AAAAA, 2016-05-05 11:43:31.395, AAAAA, 2016-05-05 11:43:31.395, 1, 51000, 63DD4A03-EE99-4BD6-9D81-4A9EB50CF97E]
+[EL Fine]: sql: 2016-05-05 11:43:31.486--ClientSession(750086022)--Connection(842461350)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Roles_T (roleId, RoleDescription, roleHelp, RoleIcon, RoleName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [F24A8802-642F-4EB2-BCCD-B751CBBD1249, Mw9giwvPpFYvJNJJD8JkNILjygWXAMrA7KUQw7FnrRjReHUEhK, 2ZQMNyaVT3ATRhXQgo2uOuPRqut89BhU6qS0ImFeHfc0DerytO, qdORSlxWRxh5CguWucLsaaZ7oyiMu2uBFSEIopucOJfvC5bRfi, xMZ70KD3RAtkbVwxffKY4IVpHxDgp8j2LYt8Ts3bs8Zn0kbQjd, 1, AAAAA, 2016-05-05 11:43:31.477, AAAAA, 2016-05-05 11:43:31.477, 1, 51000]
+Setting logged in user info for ADD
+[EL Fine]: sql: 2016-05-05 11:43:31.538--ClientSession(614446510)--Connection(842461350)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserRoleBridge_T (roleUserMapId, roleId, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [20ED230F-501F-4939-9AB9-1FE62FCD5A07, F24A8802-642F-4EB2-BCCD-B751CBBD1249, 63DD4A03-EE99-4BD6-9D81-4A9EB50CF97E, 1, AAAAA, 2016-05-05 11:43:31.535, AAAAA, 2016-05-05 11:43:31.535, 1, 51000]
+[EL Fine]: sql: 2016-05-05 11:43:31.591--ClientSession(1397517209)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT roleUserMapId, roleId, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserRoleBridge_T WHERE ((activeStatus = ?) AND (roleUserMapId = ?))
+	bind => [1, 20ED230F-501F-4939-9AB9-1FE62FCD5A07]
+Setting logged in user info for UPDATE
+[EL Fine]: sql: 2016-05-05 11:43:31.596--ClientSession(278956970)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT roleUserMapId, roleId, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserRoleBridge_T WHERE (roleUserMapId = ?)
+	bind => [20ED230F-501F-4939-9AB9-1FE62FCD5A07]
+[EL Fine]: sql: 2016-05-05 11:43:31.603--ClientSession(1553203125)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT roleUserMapId, roleId, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserRoleBridge_T WHERE ((activeStatus = ?) AND (roleUserMapId = ?))
+	bind => [1, 20ED230F-501F-4939-9AB9-1FE62FCD5A07]
+[EL Fine]: sql: 2016-05-05 11:43:31.611--ClientSession(1308780474)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT roleUserMapId, roleId, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserRoleBridge_T WHERE ((activeStatus = ?) AND (roleId = ?))
+	bind => [1, F24A8802-642F-4EB2-BCCD-B751CBBD1249]
+[EL Fine]: sql: 2016-05-05 11:43:31.618--ClientSession(92161952)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT roleUserMapId, roleId, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserRoleBridge_T WHERE ((activeStatus = ?) AND (userId = ?))
+	bind => [1, 63DD4A03-EE99-4BD6-9D81-4A9EB50CF97E]
+[EL Fine]: sql: 2016-05-05 11:43:31.632--ClientSession(1864185095)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT roleUserMapId, roleId, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserRoleBridge_T WHERE (roleUserMapId = ?)
+	bind => [20ED230F-501F-4939-9AB9-1FE62FCD5A07]
+[EL Fine]: sql: 2016-05-05 11:43:31.635--ClientSession(1864185095)--Connection(842461350)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserRoleBridge_T WHERE ((roleUserMapId = ?) AND (versionId = ?))
+	bind => [20ED230F-501F-4939-9AB9-1FE62FCD5A07, 1]
+[EL Fine]: sql: 2016-05-05 11:43:31.709--ClientSession(1968897089)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT roleId, RoleDescription, roleHelp, RoleIcon, RoleName, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Roles_T WHERE (roleId = ?)
+	bind => [F24A8802-642F-4EB2-BCCD-B751CBBD1249]
+[EL Fine]: sql: 2016-05-05 11:43:31.711--ClientSession(1968897089)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT roleMenuMapId, isExecute, isRead, isWrite, menuId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode, roleId FROM ast_RoleMenuBridge_TP WHERE (roleId = ?)
+	bind => [F24A8802-642F-4EB2-BCCD-B751CBBD1249]
+[EL Fine]: sql: 2016-05-05 11:43:31.714--ClientSession(1968897089)--Connection(842461350)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Roles_T WHERE ((roleId = ?) AND (versionId = ?))
+	bind => [F24A8802-642F-4EB2-BCCD-B751CBBD1249, 1]
+[EL Fine]: sql: 2016-05-05 11:43:31.741--ClientSession(2080853838)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT userId, allowMultipleLogin, changePasswordNextLogin, genTempOneTimePassword, isDeleted, isLocked, lastPasswordChangeDate, multiFactorAuthEnabled, passwordAlgo, passwordExpiryDate, sessionTimeout, userAccessCode, userAccessDomainId, userAccessLevelId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_User_T WHERE (userId = ?)
+	bind => [63DD4A03-EE99-4BD6-9D81-4A9EB50CF97E]
+[EL Fine]: sql: 2016-05-05 11:43:31.743--ClientSession(2080853838)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT userDataId, last5Passwords, oneTimePassword, oneTimePasswordExpiry, oneTimePasswordGenDate, password, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode, userId FROM ast_UserData_TP WHERE (userId = ?)
+	bind => [63DD4A03-EE99-4BD6-9D81-4A9EB50CF97E]
+[EL Fine]: sql: 2016-05-05 11:43:31.745--ClientSession(2080853838)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT passRecoveryId, answer, questionId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode, userId FROM ast_PassRecovery_TP WHERE (userId = ?)
+	bind => [63DD4A03-EE99-4BD6-9D81-4A9EB50CF97E]
+[EL Fine]: sql: 2016-05-05 11:43:31.749--ClientSession(2080853838)--Connection(842461350)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserData_TP WHERE ((userDataId = ?) AND (versionId = ?))
+	bind => [6697E051-6238-49D8-908F-921222C1ABE5, 1]
+[EL Fine]: sql: 2016-05-05 11:43:31.75--ClientSession(2080853838)--Connection(842461350)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_PassRecovery_TP WHERE ((passRecoveryId = ?) AND (versionId = ?))
+	bind => [EA14C413-BA3C-4796-B7D0-8542C8997F0E, 1]
+[EL Fine]: sql: 2016-05-05 11:43:31.752--ClientSession(2080853838)--Connection(842461350)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_User_T WHERE ((userId = ?) AND (versionId = ?))
+	bind => [63DD4A03-EE99-4BD6-9D81-4A9EB50CF97E, 1]
+[EL Fine]: sql: 2016-05-05 11:43:31.782--ClientSession(420010936)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE (questionId = ?)
+	bind => [2D58944B-D892-4A17-8730-08AEFC3ADDDD]
+[EL Fine]: sql: 2016-05-05 11:43:31.785--ClientSession(420010936)--Connection(842461350)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Question_M WHERE ((questionId = ?) AND (versionId = ?))
+	bind => [2D58944B-D892-4A17-8730-08AEFC3ADDDD, 1]
+[EL Fine]: sql: 2016-05-05 11:43:31.816--ClientSession(4472330)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE (userAccessLevelId = ?)
+	bind => [EBF063B2-2102-4064-91B2-8418DFC634F4]
+[EL Fine]: sql: 2016-05-05 11:43:31.818--ClientSession(4472330)--Connection(842461350)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserAccessLevel_M WHERE ((userAccessLevelId = ?) AND (versionId = ?))
+	bind => [EBF063B2-2102-4064-91B2-8418DFC634F4, 1]
+[EL Fine]: sql: 2016-05-05 11:43:31.849--ClientSession(1904979661)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE (userAccessDomainId = ?)
+	bind => [7562B51F-8887-4E60-98D2-1655E9F45E07]
+[EL Fine]: sql: 2016-05-05 11:43:31.85--ClientSession(1904979661)--Connection(842461350)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserAccessDomain_M WHERE ((userAccessDomainId = ?) AND (versionId = ?))
+	bind => [7562B51F-8887-4E60-98D2-1655E9F45E07, 1]
+]]></system-out>
+  <system-err><![CDATA[java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+]]></system-err>
+</testsuite>
