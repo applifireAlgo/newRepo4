@@ -45,4 +45,8 @@ public abstract class ItemService {
     public HttpEntity<ResponseBean> findById(FindByBean findByBean) throws Exception {
         return null;
     }
+
+    public HttpEntity<ResponseBean> NamedItemQ() throws Exception {
+        return null;
+    }
 }

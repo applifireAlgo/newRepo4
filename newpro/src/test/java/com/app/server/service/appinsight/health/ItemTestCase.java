@@ -123,7 +123,7 @@ public class ItemTestCase extends EntityTestCriteria {
 
     private Item createItem(Boolean isSave) throws Exception {
         Brands brands = new Brands();
-        brands.setBrandNm("XNqBvX9BPK2Q6DqnjMSm46SPzKJQ9j5JK9Jar6tzc4s8mtY9PF");
+        brands.setBrandNm("NaPxGQleeNBVizzkVJgHN1eovQiWQndoellQ0jfQKpuEWpu6jm");
         Brands BrandsTest = new Brands();
         if (isSave) {
             BrandsTest = brandsRepository.save(brands);
@@ -131,7 +131,7 @@ public class ItemTestCase extends EntityTestCriteria {
         }
         Category category = new Category();
         category.setBrandnm((java.lang.String) BrandsTest._getPrimarykey()); /* ******Adding refrenced table data */
-        category.setCategorynm("IqJgdUTS7iieBprWY6l9SaVOiGAekYkGGo4qXLAcoM4xcmgYgL");
+        category.setCategorynm("saziMzCoB9rFgANn5OfSrxQomfxTWH38uqdgqa4MJXcccsD3TU");
         Category CategoryTest = new Category();
         if (isSave) {
             CategoryTest = categoryRepository.save(category);
@@ -140,7 +140,7 @@ public class ItemTestCase extends EntityTestCriteria {
         Item item = new Item();
         item.setBrandnm((java.lang.String) BrandsTest._getPrimarykey()); /* ******Adding refrenced table data */
         item.setCategorynm((java.lang.String) CategoryTest._getPrimarykey());
-        item.setItemname("tp5x9BmPdI4ysy6KEXSo42WYFRcmAcb9JKKHwMMhDYiEhGd0my");
+        item.setItemname("kHGJ1eSFjXSYUiOpgO6bULM5Kzklqg2Ui2U3YVhDQ5NC5pBEAC");
         item.setEntityValidator(entityValidator);
         return item;
     }
@@ -170,7 +170,7 @@ public class ItemTestCase extends EntityTestCriteria {
             org.junit.Assert.assertNotNull(map.get("ItemPrimaryKey"));
             Item item = itemRepository.findById((java.lang.String) map.get("ItemPrimaryKey"));
             item.setVersionId(1);
-            item.setItemname("UW847RTvnNRTDBmhQOUl5TNd608bPoxzz989SFkbKY8hM22MUC");
+            item.setItemname("kFvD27Lg95F4cKYdAPnlYzW29yApP687rZnc2Lxn75ADHxf3lW");
             item.setEntityAudit(1, "xyz", RECORD_TYPE.UPDATE);
             itemRepository.update(item);
         } catch (java.lang.Exception e) {
@@ -213,6 +213,15 @@ public class ItemTestCase extends EntityTestCriteria {
     }
 
     @Test
+    public void testNQNamedItemQ() {
+        try {
+            itemRepository.NamedItemQ();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
     public void test6Delete() {
         try {
             org.junit.Assert.assertNotNull(map.get("ItemPrimaryKey"));
@@ -239,7 +248,7 @@ public class ItemTestCase extends EntityTestCriteria {
     private List<EntityTestCriteria> addingListOfFieldForNegativeTesting() {
         List<EntityTestCriteria> entityContraints = new java.util.ArrayList<EntityTestCriteria>();
         entityContraints.add(new EntityTestCriteria(NOT_NULL, 1, "itemname", null));
-        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "itemname", "V23xe3wJHjsyxDH1pEp3kH6RiwMSEai4fjwYrvEUidjOnAbHVPLLQoaRCXLgL47eRzX8VJiakxmfvMKgTcA2GVdIAAuOxi8vvvIRZ0aCNdDNzG0s0AE2tU7d9LkTFo7obZVxLRMqM8D9B1MRW9QnCIIETPjZylffJ1Ku2CuOUYyy3KeEt941NE14IJrFlqFdpggA3PBj6eCCO9pV0XYW34yA6dOvTBPoqlcpPhanLti2ECcOj4c8FWRbdhFxxlA3e"));
+        entityContraints.add(new EntityTestCriteria(MIN_MAX, 2, "itemname", "fOc2fXEVAcmPfVhfjBMn5B5dM7Rrpd0QAgbrGnxg2Z9QEzADXa0akry4WbLNDffsG55aLM3uWliFUog2n2H3gHaNSqdmorZvjHftvKFJWWTOTM4ZIQbgxoaFaGH6x7dUveFC9CqtkI5FIbxpGjgfjrrovTAarLfSnsoPTfKnKzAU4U8iE6Zz1gryO0OFctGsXR6mO8Q1TS2ngyHBTGmJMThUJpLf3EetT03ZDvfqdgXCNFVsiYFJs5CrZA069xKGr"));
         return entityContraints;
     }
 

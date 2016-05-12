@@ -28,8 +28,8 @@ import javax.persistence.NamedQueries;
 @Table(name = "ast_Item_T")
 @Entity
 @Cache(type = CacheType.CACHE)
-@SourceCodeAuthorClass(createdBy = "shweta.zagade@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "Item", complexity = Complexity.LOW)
-@NamedQueries({ @javax.persistence.NamedQuery(name = "Item.findByBrandnm", query = "select e from Item e where e.systemInfo.activeStatus=1 and e.brandnm=:brandnm"), @javax.persistence.NamedQuery(name = "Item.findByCategorynm", query = "select e from Item e where e.systemInfo.activeStatus=1 and e.categorynm=:categorynm"), @javax.persistence.NamedQuery(name = "Item.findById", query = "select e from Item e where e.systemInfo.activeStatus=1 and e.itemId =:itemId") })
+@SourceCodeAuthorClass(createdBy = "shweta.zagade@algorhythm.co.in", updatedBy = "shweta.zagade@algorhythm.co.in", versionNumber = "3", comments = "Item", complexity = Complexity.LOW)
+@NamedQueries({ @javax.persistence.NamedQuery(name = "Item.findByBrandnm", query = "select e from Item e where e.systemInfo.activeStatus=1 and e.brandnm=:brandnm"), @javax.persistence.NamedQuery(name = "Item.findByCategorynm", query = "select e from Item e where e.systemInfo.activeStatus=1 and e.categorynm=:categorynm"), @javax.persistence.NamedQuery(name = "Item.findById", query = "select e from Item e where e.systemInfo.activeStatus=1 and e.itemId =:itemId"), @javax.persistence.NamedQuery(name = "NamedItemQ", query = "SELECT item FROM Item AS item ") })
 public class Item implements Serializable, CommonEntityInterface, Comparator<Item> {
 
     @Column(name = "itemname")

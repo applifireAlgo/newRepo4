@@ -24,4 +24,6 @@ public interface ItemRepository<T> extends SearchInterface {
     public List<T> findByCategorynm(String categorynm) throws Exception;
 
     public T findById(String itemId) throws Exception;
+
+    public List<T> NamedItemQ() throws Exception;
 }

@@ -114,4 +114,13 @@ public class ItemRepositoryImpl extends SearchInterfaceImpl implements ItemRepos
         Log.out.println("AISHI324100200", runtimeLogInfoHelper.getRequestHeaderBean(), "ItemRepositoryImpl", "findById", "Total Records Fetched = " + listOfItem);
         return listOfItem;
     }
+
+    @Transactional
+    public List<Item> NamedItemQ() throws Exception {
+        javax.persistence.EntityManager emanager = emfResource.getResource();
+        javax.persistence.Query query = emanager.createNamedQuery("NamedItemQ");
+        List<Item> listOfItem = query.getResultList();
+        Log.out.println("AISHI324100200", runtimeLogInfoHelper.getRequestHeaderBean(), "ItemRepositoryImpl", "NamedItemQ", "Total Records Fetched = " + listOfItem.size());
+        return listOfItem;
+    }
 }

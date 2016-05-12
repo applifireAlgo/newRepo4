@@ -83,6 +83,7 @@
     <class>com.app.shared.appinsight.health.Item</class>
     <class>com.app.shared.appinsight.health.Tone</class>
     <class>com.app.shared.appinsight.health.Ttwo</class>
+    <class>com.app.shared.appinsight.health.Item</class>
     </persistence-unit>
 
 </persistence>

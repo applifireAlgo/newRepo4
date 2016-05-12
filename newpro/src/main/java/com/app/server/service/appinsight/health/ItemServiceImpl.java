@@ -142,4 +142,17 @@ public class ItemServiceImpl extends ItemService {
         Log.out.println("AISHI124100200", runtimeLogInfoHelper.getRequestHeaderBean(), "ItemServiceImpl", "save", "Item");
         return new org.springframework.http.ResponseEntity<ResponseBean>(responseBean, HttpStatus.valueOf(appAlarm.getAlarmStatus()));
     }
+
+    @RequestMapping(value = "/NamedItemQ", method = RequestMethod.POST)
+    @Override
+    public HttpEntity<ResponseBean> NamedItemQ() throws Exception {
+        org.springframework.http.HttpStatus httpStatus = org.springframework.http.HttpStatus.OK;
+        java.util.List<com.app.shared.appinsight.health.Item> lstitem = itemrepo.NamedItemQ();
+        AppAlarm appAlarm = Log.getAlarm("AISHI124100200");
+        com.athena.server.pluggable.utils.bean.ResponseBean responseBean = new ResponseBean(appAlarm);
+        responseBean.add("message", String.format(appAlarm.getMessage(), "Item"));
+        responseBean.add("data", lstitem);
+        Log.out.println("AISHI124100200", runtimeLogInfoHelper.getRequestHeaderBean(), "ItemServiceImpl", "save", "Item");
+        return new org.springframework.http.ResponseEntity<ResponseBean>(responseBean, HttpStatus.valueOf(appAlarm.getAlarmStatus()));
+    }
 }
