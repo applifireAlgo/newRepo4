@@ -1,0 +1,2 @@
+load data infile '/tmp/applifire/db/WO0GMNEJHFAXEJPRCKQRA/93BD41F3-4BEA-4F89-A0C6-2B1FA7A0DCB0/art/data/art_chart_properties.csv' "str '#appfirenewline#'" into table art_chart_properties FIELDS TERMINATED BY '#appfire#' (property_id,property_name,widgets,widgets_json,created_by,created_date DATE 'yyyy-mm-dd hh24:mi:ss',updated_by,updated_date DATE 'yyyy-mm-dd hh24:mi:ss',version_id,active_status)
+

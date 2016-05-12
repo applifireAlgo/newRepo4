@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.app.server.service.appinsight.health.TestTwoTestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-05-12T07:44:20" hostname="8492733ddfac" time="0.273">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.appinsight.health.TestTwoTestCase" time="0.098"/>
+  <testcase name="test2Update" classname="com.app.server.service.appinsight.health.TestTwoTestCase" time="0.071"/>
+  <testcase name="test3FindById" classname="com.app.server.service.appinsight.health.TestTwoTestCase" time="0.013"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.appinsight.health.TestTwoTestCase" time="0.032"/>
+  <testcase name="test6Delete" classname="com.app.server.service.appinsight.health.TestTwoTestCase" time="0.057"/>
+  <system-out><![CDATA[Thu May 12 07:44:20 UTC 2016|Log Manager Factory|Initialization Process started.....
+Thu May 12 07:44:20 UTC 2016|Log Manager|Initialized with Path = [/home/applifire/workspace/testpro2/src/main/webapp/WEB-INF/conf]
+Thu May 12 07:44:20 UTC 2016|Alarm Manager|Initialized with Path = [/home/applifire/workspace/testpro2/src/main/webapp/WEB-INF/conf]
+Thu May 12 07:44:20 UTC 2016|Alarm Manager|Loading Alarms ......
+Thu May 12 07:44:20 UTC 2016|Alarm XML Parser|FWA|XML Parsing Complete........ 
+Thu May 12 07:44:20 UTC 2016|Alarm File Manager|FWA|Alarm File Status.. [ApplicationFrameworkAlarms.xml]|Version=15|Status=Done 
+Thu May 12 07:44:20 UTC 2016|Alarm File Manager|FWA|Alarm Stats = ( BC/AL=4/374 SYS=4/9 [374/0]  TPL=0/0 [0/0]  APP= A.Map=[453]  E.Map EC/RC=[151/40] )
+Thu May 12 07:44:20 UTC 2016|Alarm XML Parser|APP|XML Parsing Complete........ 
+Thu May 12 07:44:20 UTC 2016|Alarm File Manager|APP|Alarm File Status.. [ApplicationAlarms.xml]|Version=1|Status=Done 
+Thu May 12 07:44:20 UTC 2016|Alarm File Manager|APP|Alarm Stats = ( BC/AL=5/453 SYS=4/9 [374/0]  TPL=0/0 [0/0]  APP=1/1 [79/0]  A.Map=[532]  E.Map EC/RC=[198/50] )
+Thu May 12 07:44:20 UTC 2016|ApplicationAlarmContext| <><><><><> Create App Alarms ....  <><><><><> 
+Thu May 12 07:44:20 UTC 2016|ApplicationAlarmContext|Alarms are generated ONLY in Development Mode.. 
+Thu May 12 07:44:20 UTC 2016|Alarm Manager|APP|Alarm Stats = ( BC/AL=5/453 SYS=4/9 [374/0]  TPL=0/0 [0/0]  APP=1/1 [79/0]  A.Map=[532]  E.Map EC/RC=[198/50] )
+Thu May 12 07:44:20 UTC 2016|Alarm Manager|Initialized Exception Lookup...
+Thu May 12 07:44:20 UTC 2016|Log Manager|Initialize Log Config File ......
+Thu May 12 07:44:20 UTC 2016|Pluggable Connectors|Adding Connectors : StandardOutputConnector isEnabled=true isDefault=false isFallBack=true
+Thu May 12 07:44:20 UTC 2016|Pluggable Connectors|Adding Connectors : StandardFileConnector isEnabled=true isDefault=false isFallBack=false
+Thu May 12 07:44:20 UTC 2016|Pluggable Connectors|Adding Connectors : Sprinkler isEnabled=true isDefault=true isFallBack=false
+Thu May 12 07:44:20 UTC 2016|Pluggable Connectors|Default Connector Name : com.spartan.logger.core.LogMessenger
+Thu May 12 07:44:20 UTC 2016|Log Config Parser|Connector Least Log Level =[4]  FallBack Log Level =[3]
+Thu May 12 07:44:20 UTC 2016|Log Manager|Loading Default Connector for Logging ......
+Thu May 12 07:44:20 UTC 2016|Log Manager|Loading class .. com.spartan.logger.core.LogMessenger
+Thu May 12 07:44:20 UTC 2016|Plugggable Connector|Connector class com.spartan.logger.core.LogMessenger Initialized... @ Log Level = 3
+Thu May 12 07:44:20 UTC 2016|Log Manager|Starting the Default Connector [com.spartan.logger.core.LogMessenger@39b6df8b] ....
+Thu May 12 07:44:20 UTC 2016|Scheduler|Starting the Scheduler ......
+Thu May 12 07:44:20 UTC 2016|Scheduler|Adding [LMID=[1dc132a4-8ba9-4fa9-974d-261db1ddfbd5]] Delay=5 Time Unit=MINUTES
+Thu May 12 07:44:20 UTC 2016|Scheduler|Adding [App Alarm Manager File=[ApplicationAlarms.xml]] Delay=30 Time Unit=MINUTES
+Thu May 12 07:44:20 UTC 2016|Scheduler|Adding [FW Alarm Manager File=[ApplicationFrameworkAlarms.xml]] Delay=3 Time Unit=MINUTES
+Thu May 12 07:44:20 UTC 2016|Scheduler|Startup Completed..
+Thu May 12 07:44:20 UTC 2016|Log Manager|Initialization Process Complete ......
+Thu May 12 07:44:20 UTC 2016|Log Manager Factory|Log Manager READY! ID = 1dc132a4-8ba9-4fa9-974d-261db1ddfbd5
+Setting logged in user info for ADD
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI312100100 Alarm Split = AIS-HI-3-1-2-100-100
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI322100200 Alarm Split = AIS-HI-3-2-2-100-200
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI317100100 Alarm Split = AIS-HI-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:20.754--ClientSession(1966382214)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_TestTwo_M (tod, tnm, tno, tpp, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [32CDA3D1-49C7-4714-9996-481E455D3F14, m15l6UmU34ovHjyE6EyL9VUg4dSQMM0OEKx9qnuii7A0D2zB11, 2147483647, true, 1, AAAAA, 2016-05-12 07:44:20.748, AAAAA, 2016-05-12 07:44:20.748, 1, 51000]
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI314100100 Alarm Split = AIS-HI-3-1-4-100-100
+[EL Fine]: sql: 2016-05-12 07:44:20.828--ClientSession(607552042)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT tod, tnm, tno, tpp, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_TestTwo_M WHERE ((activeStatus = ?) AND (tod = ?))
+	bind => [1, 32CDA3D1-49C7-4714-9996-481E455D3F14]
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI324100200 Alarm Split = AIS-HI-3-2-4-100-200
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI317100100 Alarm Split = AIS-HI-3-1-7-100-100
+Setting logged in user info for UPDATE
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI311100100 Alarm Split = AIS-HI-3-1-1-100-100
+[EL Fine]: sql: 2016-05-12 07:44:20.841--ClientSession(1183038513)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT tod, tnm, tno, tpp, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_TestTwo_M WHERE (tod = ?)
+	bind => [32CDA3D1-49C7-4714-9996-481E455D3F14]
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI321100200 Alarm Split = AIS-HI-3-2-1-100-200
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI317100100 Alarm Split = AIS-HI-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:20.845--ClientSession(1183038513)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--UPDATE ast_TestTwo_M SET tnm = ?, versionId = ? WHERE ((tod = ?) AND (versionId = ?))
+	bind => [O0Ba1Mrnfc8ngpAiiBlDXbv2jWXzIFXKBZKBZdq3qfRZJ7jJY2, 2, 32CDA3D1-49C7-4714-9996-481E455D3F14, 1]
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI314100100 Alarm Split = AIS-HI-3-1-4-100-100
+[EL Fine]: sql: 2016-05-12 07:44:20.9--ClientSession(484523400)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT tod, tnm, tno, tpp, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_TestTwo_M WHERE ((activeStatus = ?) AND (tod = ?))
+	bind => [1, 32CDA3D1-49C7-4714-9996-481E455D3F14]
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI324100200 Alarm Split = AIS-HI-3-2-4-100-200
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI317100100 Alarm Split = AIS-HI-3-1-7-100-100
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI318100100 Alarm Split = AIS-HI-3-1-8-100-100
+[EL Fine]: sql: 2016-05-12 07:44:20.95--ClientSession(517338739)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT tod, tnm, tno, tpp, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_TestTwo_M WHERE (tod = ?)
+	bind => [32CDA3D1-49C7-4714-9996-481E455D3F14]
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI328100200 Alarm Split = AIS-HI-3-2-8-100-200
+Thu May 12 07:44:20 UTC 2016|Unknown Alarm = AISHI317100100 Alarm Split = AIS-HI-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:20.954--ClientSession(517338739)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_TestTwo_M WHERE ((tod = ?) AND (versionId = ?))
+	bind => [32CDA3D1-49C7-4714-9996-481E455D3F14, 2]
+]]></system-out>
+  <system-err><![CDATA[com.app.shared.appinsight.health.TestTwo.tnm may not be null
+com.spartan.pluggable.exception.security.InvalidDataException: 90007:Invalid Exception.:Reason = Not Available!
+	at com.athena.server.pluggable.utils.helper.EntityValidatorHelper.validateEntity(EntityValidatorHelper.java:28)
+	at com.app.shared.appinsight.health.TestTwo.isValid(TestTwo.java:167)
+	at com.app.server.service.appinsight.health.TestTwoTestCase.validateTestTwo(TestTwoTestCase.java:181)
+	at com.app.server.service.appinsight.health.TestTwoTestCase.test5NegativeTesting(TestTwoTestCase.java:214)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+com.app.shared.appinsight.health.TestTwo.tnm size must be between 1 and 256
+com.spartan.pluggable.exception.security.InvalidDataException: 90007:Invalid Exception.:Reason = Not Available!
+	at com.athena.server.pluggable.utils.helper.EntityValidatorHelper.validateEntity(EntityValidatorHelper.java:28)
+	at com.app.shared.appinsight.health.TestTwo.isValid(TestTwo.java:167)
+	at com.app.server.service.appinsight.health.TestTwoTestCase.validateTestTwo(TestTwoTestCase.java:179)
+	at com.app.server.service.appinsight.health.TestTwoTestCase.test5NegativeTesting(TestTwoTestCase.java:219)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+com.app.shared.appinsight.health.TestTwo.tno may not be null
+com.spartan.pluggable.exception.security.InvalidDataException: 90007:Invalid Exception.:Reason = Not Available!
+	at com.athena.server.pluggable.utils.helper.EntityValidatorHelper.validateEntity(EntityValidatorHelper.java:28)
+	at com.app.shared.appinsight.health.TestTwo.isValid(TestTwo.java:167)
+	at com.app.server.service.appinsight.health.TestTwoTestCase.validateTestTwo(TestTwoTestCase.java:181)
+	at com.app.server.service.appinsight.health.TestTwoTestCase.test5NegativeTesting(TestTwoTestCase.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]></system-err>
+</testsuite>

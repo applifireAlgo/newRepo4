@@ -1,0 +1,1 @@
+load data infile '$ART_DATA_PATH/art_log_bounded_context.csv' "str '#appfirenewline#'" into table art_log_bounded_context FIELDS TERMINATED BY '#appfire#' (boundedContextId,bounded_context_prefix,bounded_context_json,created_by,created_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss".0"',updated_by,updated_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss".0"',version_id,active_status)
