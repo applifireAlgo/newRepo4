@@ -63,6 +63,7 @@
     <class>com.app.shared.appbasicsetup.userrolemanagement.RoleMenuBridge</class>
     <class>com.app.shared.appbasicsetup.userrolemanagement.UserRoleBridge</class>
     <class>com.app.shared.appinsight.health.Emp</class>
+    <class>com.app.shared.appinsight.health.TestB</class>
     </persistence-unit>
 
 </persistence>

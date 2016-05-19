@@ -7,8 +7,8 @@ import com.spartan.pluggable.logger.alarms.AppAlarm;
 import com.spartan.pluggable.logger.api.LogManagerFactory;
 import com.athena.server.pluggable.utils.AppLoggerConstant;
 import com.spartan.pluggable.logger.api.LogManager;
-import com.app.server.repository.appinsight.health.EmpRepository;
-import com.app.shared.appinsight.health.Emp;
+import com.app.server.repository.appinsight.health.TestBRepository;
+import com.app.shared.appinsight.health.TestB;
 import com.athena.server.pluggable.utils.helper.RuntimeLogInfoHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,12 +21,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.PathVariable;
 import com.athena.server.pluggable.utils.bean.FindByBean;
-import com.app.server.businessservice.appinsight.health.TestEmpDs;
 
 @RestController
-@SourceCodeAuthorClass(createdBy = "shweta.zagade@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "Service for Emp Master table Entity", complexity = Complexity.LOW)
-@RequestMapping("/Emp")
-public class EmpServiceImpl extends EmpService {
+@SourceCodeAuthorClass(createdBy = "shweta.zagade@algorhythm.co.in", updatedBy = "", versionNumber = "1", comments = "Service for TestB Master table Entity", complexity = Complexity.LOW)
+@RequestMapping("/TestB")
+public class TestBServiceImpl extends TestBService {
 
     private LogManager Log = LogManagerFactory.getInstance(AppLoggerConstant.LOGGER_ID);
 
@@ -34,62 +33,74 @@ public class EmpServiceImpl extends EmpService {
     private RuntimeLogInfoHelper runtimeLogInfoHelper;
 
     @Autowired
-    private EmpRepository<Emp> emprepo;
+    private TestBRepository<TestB> testBrepo;
 
     @RequestMapping(value = "/findAll", consumes = "application/json", method = RequestMethod.GET)
     @Override
     public HttpEntity<ResponseBean> findAll() throws Exception {
-        java.util.List<com.app.shared.appinsight.health.Emp> lstemp = emprepo.findAll();
+        java.util.List<com.app.shared.appinsight.health.TestB> lsttestb = testBrepo.findAll();
         AppAlarm appAlarm = Log.getAlarm("AISHI124100200");
         ResponseBean responseBean = new ResponseBean(appAlarm);
-        responseBean.add("message", String.format(appAlarm.getMessage(), "Emp"));
-        responseBean.add("data", lstemp);
-        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "EmpServiceImpl", "findAll", "Emp");
+        responseBean.add("message", String.format(appAlarm.getMessage(), "TestB"));
+        responseBean.add("data", lsttestb);
+        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "TestBServiceImpl", "findAll", "TestB");
+        return new org.springframework.http.ResponseEntity<ResponseBean>(responseBean, HttpStatus.valueOf(appAlarm.getAlarmStatus()));
+    }
+
+    @RequestMapping(consumes = "application/json", method = RequestMethod.POST)
+    @Override
+    public HttpEntity<ResponseBean> save(@RequestBody TestB entity) throws Exception {
+        testBrepo.save(entity);
+        AppAlarm appAlarm = Log.getAlarm("AISHI122100201");
+        ResponseBean responseBean = new ResponseBean(appAlarm);
+        responseBean.add("message", String.format(appAlarm.getMessage(), "TestB"));
+        responseBean.add("data", entity);
+        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "TestBServiceImpl", "save", "TestB");
         return new org.springframework.http.ResponseEntity<ResponseBean>(responseBean, HttpStatus.valueOf(appAlarm.getAlarmStatus()));
     }
 
     @RequestMapping(consumes = "application/json", headers = { "isArray" }, method = RequestMethod.POST)
     @Override
-    public HttpEntity<ResponseBean> save(@RequestBody List<Emp> entity, @RequestHeader("isArray") boolean request) throws Exception {
-        emprepo.save(entity);
+    public HttpEntity<ResponseBean> save(@RequestBody List<TestB> entity, @RequestHeader("isArray") boolean request) throws Exception {
+        testBrepo.save(entity);
         AppAlarm appAlarm = Log.getAlarm("AISHI122100201");
         ResponseBean responseBean = new ResponseBean(appAlarm);
-        responseBean.add("message", String.format(appAlarm.getMessage(), "Emp"));
-        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "EmpServiceImpl", "save", "Emp");
+        responseBean.add("message", String.format(appAlarm.getMessage(), "TestB"));
+        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "TestBServiceImpl", "save", "TestB");
         return new org.springframework.http.ResponseEntity<ResponseBean>(responseBean, HttpStatus.valueOf(appAlarm.getAlarmStatus()));
     }
 
     @RequestMapping(value = "/{cid}", consumes = "application/json", method = RequestMethod.DELETE)
     @Override
     public HttpEntity<ResponseBean> delete(@PathVariable("cid") String entity) throws Exception {
-        emprepo.delete(entity);
+        testBrepo.delete(entity);
         AppAlarm appAlarm = Log.getAlarm("AISHI128100200");
         ResponseBean responseBean = new ResponseBean(appAlarm);
-        responseBean.add("message", String.format(appAlarm.getMessage(), "Emp"));
-        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "EmpServiceImpl", "delete", "Emp");
+        responseBean.add("message", String.format(appAlarm.getMessage(), "TestB"));
+        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "TestBServiceImpl", "delete", "TestB");
         return new org.springframework.http.ResponseEntity<ResponseBean>(responseBean, HttpStatus.valueOf(appAlarm.getAlarmStatus()));
     }
 
     @RequestMapping(consumes = "application/json", method = RequestMethod.PUT)
     @Override
-    public HttpEntity<ResponseBean> update(@RequestBody Emp entity) throws Exception {
-        emprepo.update(entity);
+    public HttpEntity<ResponseBean> update(@RequestBody TestB entity) throws Exception {
+        testBrepo.update(entity);
         AppAlarm appAlarm = Log.getAlarm("AISHI123100200");
         ResponseBean responseBean = new ResponseBean(appAlarm);
-        responseBean.add("message", String.format(appAlarm.getMessage(), "Emp"));
+        responseBean.add("message", String.format(appAlarm.getMessage(), "TestB"));
         responseBean.add("data", entity._getPrimarykey());
-        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "EmpServiceImpl", "update", "Emp");
+        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "TestBServiceImpl", "update", "TestB");
         return new org.springframework.http.ResponseEntity<ResponseBean>(responseBean, HttpStatus.valueOf(appAlarm.getAlarmStatus()));
     }
 
     @RequestMapping(consumes = "application/json", headers = { "isArray" }, method = RequestMethod.PUT)
     @Override
-    public HttpEntity<ResponseBean> update(@RequestBody List<Emp> entity, @RequestHeader("isArray") boolean request) throws Exception {
-        emprepo.update(entity);
+    public HttpEntity<ResponseBean> update(@RequestBody List<TestB> entity, @RequestHeader("isArray") boolean request) throws Exception {
+        testBrepo.update(entity);
         AppAlarm appAlarm = Log.getAlarm("AISHI123100200");
         ResponseBean responseBean = new ResponseBean(appAlarm);
-        responseBean.add("message", String.format(appAlarm.getMessage(), "Emp"));
-        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "EmpServiceImpl", "update", "Emp");
+        responseBean.add("message", String.format(appAlarm.getMessage(), "TestB"));
+        Log.out.println(appAlarm.getAlarmID(), runtimeLogInfoHelper.getRequestHeaderBean(), "TestBServiceImpl", "update", "TestB");
         return new org.springframework.http.ResponseEntity<ResponseBean>(responseBean, HttpStatus.valueOf(appAlarm.getAlarmStatus()));
     }
 
@@ -97,26 +108,12 @@ public class EmpServiceImpl extends EmpService {
     @Override
     public HttpEntity<ResponseBean> findById(@RequestBody FindByBean findByBean) throws Exception {
         org.springframework.http.HttpStatus httpStatus = org.springframework.http.HttpStatus.OK;
-        com.app.shared.appinsight.health.Emp lstemp = emprepo.findById((java.lang.String) findByBean.getFindKey());
+        com.app.shared.appinsight.health.TestB lsttestb = testBrepo.findById((java.lang.String) findByBean.getFindKey());
         AppAlarm appAlarm = Log.getAlarm("AISHI124100200");
         com.athena.server.pluggable.utils.bean.ResponseBean responseBean = new ResponseBean(appAlarm);
-        responseBean.add("message", String.format(appAlarm.getMessage(), "Emp"));
-        responseBean.add("data", lstemp);
-        Log.out.println("AISHI124100200", runtimeLogInfoHelper.getRequestHeaderBean(), "EmpServiceImpl", "save", "Emp");
+        responseBean.add("message", String.format(appAlarm.getMessage(), "TestB"));
+        responseBean.add("data", lsttestb);
+        Log.out.println("AISHI124100200", runtimeLogInfoHelper.getRequestHeaderBean(), "TestBServiceImpl", "save", "TestB");
         return new org.springframework.http.ResponseEntity<ResponseBean>(responseBean, HttpStatus.valueOf(appAlarm.getAlarmStatus()));
-    }
-
-    @Autowired
-    private TestEmpDs testempds;
-
-    @RequestMapping(consumes = "application/json", method = RequestMethod.POST)
-    @Override
-    public HttpEntity<ResponseBean> save(@RequestBody Emp entity) throws Exception {
-        com.athena.server.pluggable.utils.bean.ResponseBean responseBean = new com.athena.server.pluggable.utils.bean.ResponseBean();
-        org.springframework.http.HttpStatus httpStatus = org.springframework.http.HttpStatus.CREATED;
-        testempds.proTestEmpDs(entity);
-        responseBean.add("success", true);
-        responseBean.add("message", "Successfully executed ");
-        return new org.springframework.http.ResponseEntity<com.athena.server.pluggable.utils.bean.ResponseBean>(responseBean, httpStatus);
     }
 }

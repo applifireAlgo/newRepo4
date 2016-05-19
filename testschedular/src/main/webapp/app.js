@@ -8,7 +8,7 @@ Ext.application({
 
     extend: 'Testschedular.Application',
     
-    autoCreateViewport: 'Testschedular.view.main.Main'
+/**AppPathDetails**/autoCreateViewport:"Testschedular.view.desktop.design.drawer.main.MainPanel",
 	
     //-------------------------------------------------------------------------
     // Most customizations should be made to Testschedular.Application. If you need to
