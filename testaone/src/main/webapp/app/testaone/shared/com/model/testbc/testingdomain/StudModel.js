@@ -1,0 +1,31 @@
+Ext.define('Testaone.testaone.shared.com.model.testbc.testingdomain.StudModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "sid",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "studName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "dob",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

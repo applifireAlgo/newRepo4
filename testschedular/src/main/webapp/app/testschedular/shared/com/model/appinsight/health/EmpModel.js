@@ -1,0 +1,31 @@
+Ext.define('Testschedular.testschedular.shared.com.model.appinsight.health.EmpModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "empId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "empName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "dob",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

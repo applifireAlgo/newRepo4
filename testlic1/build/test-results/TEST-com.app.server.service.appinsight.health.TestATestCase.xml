@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.app.server.service.appinsight.health.TestATestCase" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-05-05T11:42:53" hostname="bb2aa222972f" time="28.359">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.appinsight.health.TestATestCase" time="27.837"/>
+  <testcase name="test2Update" classname="com.app.server.service.appinsight.health.TestATestCase" time="0.164"/>
+  <testcase name="test3FindById" classname="com.app.server.service.appinsight.health.TestATestCase" time="0.011"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.appinsight.health.TestATestCase" time="0.057"/>
+  <testcase name="test6Delete" classname="com.app.server.service.appinsight.health.TestATestCase" time="0.288"/>
+  <system-out><![CDATA[Thu May 05 11:42:53 UTC 2016|Log Manager Factory|Initialization Process started.....
+Thu May 05 11:42:53 UTC 2016|Log Manager|Initialized with Path = [/home/applifire/workspace/testlic1/src/main/webapp/WEB-INF/conf/]
+Thu May 05 11:42:53 UTC 2016|Alarm Manager|Initialized with Path = [/home/applifire/workspace/testlic1/src/main/webapp/WEB-INF/conf/]
+Thu May 05 11:42:53 UTC 2016|Alarm Manager|Loading Alarms ......
+Thu May 05 11:42:53 UTC 2016|Alarm XML Parser|FWA|XML Parsing Complete........ 
+Thu May 05 11:42:53 UTC 2016|Alarm File Manager|FWA|Alarm File Status.. [ApplicationFrameworkAlarms.xml]|Version=13|Status=Done 
+Thu May 05 11:42:53 UTC 2016|Alarm File Manager|FWA|Alarm Stats = ( BC/AL=4/242 SYS=4/9 [242/0]  TPL=0/0 [0/0]  APP= A.Map=[320]  E.Map EC/RC=[3/0] )
+Thu May 05 11:42:53 UTC 2016|Alarm XML Parser|APP|XML Parsing Complete........ 
+Thu May 05 11:42:53 UTC 2016|Alarm File Manager|APP|Alarm File Status.. [ApplicationAlarms.xml]|Version=1|Status=Done 
+Thu May 05 11:42:53 UTC 2016|Alarm File Manager|APP|Alarm Stats = ( BC/AL=4/242 SYS=4/9 [242/0]  TPL=0/0 [0/0]  APP=0/0 [0/0]  A.Map=[320]  E.Map EC/RC=[3/0] )
+Thu May 05 11:42:53 UTC 2016|ApplicationAlarmContext| <><><><><> Create App Alarms ....  <><><><><> 
+Thu May 05 11:42:53 UTC 2016|ApplicationAlarmContext|Alarms are generated ONLY in Development Mode.. 
+Thu May 05 11:42:53 UTC 2016|Alarm Manager|APP|Alarm Stats = ( BC/AL=4/242 SYS=4/9 [242/0]  TPL=0/0 [0/0]  APP=0/0 [0/0]  A.Map=[320]  E.Map EC/RC=[3/0] )
+Thu May 05 11:42:53 UTC 2016|Alarm Manager|Initialized Exception Lookup...
+Thu May 05 11:42:53 UTC 2016|Log Manager|Initialize Log Config File ......
+Thu May 05 11:42:53 UTC 2016|Pluggable Connectors|Adding Connectors : StandardOutputConnector isEnabled=true isDefault=false isFallBack=true
+Thu May 05 11:42:53 UTC 2016|Pluggable Connectors|Adding Connectors : StandardFileConnector isEnabled=true isDefault=false isFallBack=false
+Thu May 05 11:42:53 UTC 2016|Pluggable Connectors|Adding Connectors : Sprinkler isEnabled=true isDefault=true isFallBack=false
+Thu May 05 11:42:53 UTC 2016|Pluggable Connectors|Default Connector Name : com.spartan.logger.core.LogMessenger
+Thu May 05 11:42:53 UTC 2016|Log Config Parser|Connector Least Log Level =[4]  FallBack Log Level =[3]
+Thu May 05 11:42:53 UTC 2016|Log Manager|Loading Default Connector for Logging ......
+Thu May 05 11:42:53 UTC 2016|Log Manager|Loading class .. com.spartan.logger.core.LogMessenger
+Thu May 05 11:42:53 UTC 2016|Plugggable Connector|Connector class com.spartan.logger.core.LogMessenger Initialized... @ Log Level = 3
+Thu May 05 11:42:53 UTC 2016|Log Manager|Starting the Default Connector [com.spartan.logger.core.LogMessenger@43551d57] ....
+Thu May 05 11:42:53 UTC 2016|Scheduler|Starting the Scheduler ......
+Thu May 05 11:42:53 UTC 2016|Scheduler|Adding [LMID=[6d3a8366-2969-4050-a273-8bd4fe545300]] Delay=5 Time Unit=MINUTES
+Thu May 05 11:42:53 UTC 2016|Scheduler|Adding [App Alarm Manager File=[ApplicationAlarms.xml]] Delay=30 Time Unit=MINUTES
+Thu May 05 11:42:53 UTC 2016|Scheduler|Adding [FW Alarm Manager File=[ApplicationFrameworkAlarms.xml]] Delay=3 Time Unit=MINUTES
+Thu May 05 11:42:53 UTC 2016|Scheduler|Startup Completed..
+Thu May 05 11:42:53 UTC 2016|Log Manager|Initialization Process Complete ......
+Thu May 05 11:42:53 UTC 2016|Log Manager Factory|Log Manager READY! ID = 6d3a8366-2969-4050-a273-8bd4fe545300
+[EL Config]: metadata: 2016-05-05 11:43:00.859--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.ArtPasswordPolicy] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.891--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.PasswordAlgo] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.893--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.contactmanagement.ContactType] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.893--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogConnectorAttributes] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.901--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogConnector] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConnector.
+[EL Config]: metadata: 2016-05-05 11:43:00.902--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.contactmanagement.CoreContacts] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.903--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to one mapping element [field timezone] is being defaulted to: class com.app.shared.organization.locationmanagement.Timezone.
+[EL Config]: metadata: 2016-05-05 11:43:00.91--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field address] is being defaulted to: class com.app.shared.organization.locationmanagement.Address.
+[EL Config]: metadata: 2016-05-05 11:43:00.911--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field communicationData] is being defaulted to: class com.app.shared.organization.contactmanagement.CommunicationData.
+[EL Config]: metadata: 2016-05-05 11:43:00.911--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.locationmanagement.City] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.913--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogDetails] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.913--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.ArtPasswordAlgorithm] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.914--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.SessionData] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.915--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appinsight.health.TestA] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.916--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.athena.shared.pluggable.entity.ArtEntity] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.918--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.athena.shared.pluggable.entity.AuditPropertiesEntity] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.92--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.aaa.ArtUserLastStatus] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.921--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.entity.ArtHealthStatusConfiguration] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.922--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.userrolemanagement.Roles] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.922--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field roleMenuBridge] is being defaulted to: class com.app.shared.appbasicsetup.userrolemanagement.RoleMenuBridge.
+[EL Config]: metadata: 2016-05-05 11:43:00.923--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.locationmanagement.Country] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.924--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogConfig] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.924--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field artLogSeverity] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogSeverity.
+[EL Config]: metadata: 2016-05-05 11:43:00.925--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field artLogArchitectureLayers] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogArchitectureLayer.
+[EL Config]: metadata: 2016-05-05 11:43:00.925--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field loggingProperties] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLoggingProperties.
+[EL Config]: metadata: 2016-05-05 11:43:00.925--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field artLogExceptions] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogException.
+[EL Config]: metadata: 2016-05-05 11:43:00.926--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field artLogEventActions] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogEventAction.
+[EL Config]: metadata: 2016-05-05 11:43:00.926--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field artLogStatus] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogStatus.
+[EL Config]: metadata: 2016-05-05 11:43:00.926--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field artLogConnectors] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConnector.
+[EL Config]: metadata: 2016-05-05 11:43:00.927--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.athena.shared.dataengine.entity.ArtQuery] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.928--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.entity.ZenHealthGauge] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.929--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogDomain] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.93--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogBoundedContext] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogBoundedContext.
+[EL Config]: metadata: 2016-05-05 11:43:00.93--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field artLogAlarm] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogAlarm.
+[EL Config]: metadata: 2016-05-05 11:43:00.93--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.contactmanagement.Gender] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.931--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogSeverity] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.931--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogConfig] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConfig.
+[EL Config]: metadata: 2016-05-05 11:43:00.932--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.contactmanagement.CommunicationType] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.932--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.locationmanagement.Timezone] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.933--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.userrolemanagement.RoleMenuBridge] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.934--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to one mapping element [field roles] is being defaulted to: class com.app.shared.appbasicsetup.userrolemanagement.Roles.
+[EL Config]: metadata: 2016-05-05 11:43:00.935--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.PasswordPolicy] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.936--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogArchitectureLayer] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.936--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogConfig] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConfig.
+[EL Config]: metadata: 2016-05-05 11:43:00.937--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.entity.HealthSchedulerConfiguration] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.937--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogEventAction] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.938--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogConfig] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConfig.
+[EL Config]: metadata: 2016-05-05 11:43:00.938--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.entity.ZenSchedulerHealth] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.941--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.locationmanagement.Language] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.942--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.locationmanagement.Address] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.943--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogConnector] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.944--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field logConnectorAttributes] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConnectorAttributes.
+[EL Config]: metadata: 2016-05-05 11:43:00.944--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogConfig] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConfig.
+[EL Config]: metadata: 2016-05-05 11:43:00.945--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.PassRecovery] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.945--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to one mapping element [field user] is being defaulted to: class com.app.shared.appbasicsetup.usermanagement.User.
+[EL Config]: metadata: 2016-05-05 11:43:00.946--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogAlarmEvents] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.947--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogAlarm] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.948--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogDomain] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogDomain.
+[EL Config]: metadata: 2016-05-05 11:43:00.948--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogBoundedContext] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.949--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field artLogDomain] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogDomain.
+[EL Config]: metadata: 2016-05-05 11:43:00.949--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.LoginSession] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.95--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.locationmanagement.State] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.95--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.athena.server.email.entity.ArtAppNotificationTemplate] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.951--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.UserAccessDomain] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.951--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.contactmanagement.CommunicationGroup] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.952--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.User] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.952--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to one mapping element [field userData] is being defaulted to: class com.app.shared.appbasicsetup.usermanagement.UserData.
+[EL Config]: metadata: 2016-05-05 11:43:00.953--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to many mapping element [field passRecovery] is being defaulted to: class com.app.shared.appbasicsetup.usermanagement.PassRecovery.
+[EL Config]: metadata: 2016-05-05 11:43:00.953--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.entity.ZenHealthStatus] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.953--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.contactmanagement.CommunicationData] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.953--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.userrolemanagement.UserRoleBridge] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.954--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogStatus] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.954--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogConfig] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConfig.
+[EL Config]: metadata: 2016-05-05 11:43:00.954--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.Question] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.955--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.entity.ZenRequestDetails] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.955--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.entity.ArtHealthSchedulerConfiguration] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.956--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.entity.ZenHealthCounter] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.956--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.Login] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.957--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to one mapping element [field coreContacts] is being defaulted to: class com.app.shared.organization.contactmanagement.CoreContacts.
+[EL Config]: metadata: 2016-05-05 11:43:00.957--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to one mapping element [field user] is being defaulted to: class com.app.shared.appbasicsetup.usermanagement.User.
+[EL Config]: metadata: 2016-05-05 11:43:00.957--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.entity.ZenHealth] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.958--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLoggingProperties] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.958--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogConfig] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConfig.
+[EL Config]: metadata: 2016-05-05 11:43:00.959--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.shared.alarms.entities.ArtLogException] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.959--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the many to one mapping element [field artLogConfig] is being defaulted to: class com.spartan.shared.alarms.entities.ArtLogConfig.
+[EL Config]: metadata: 2016-05-05 11:43:00.959--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.server.session.entity.AppSessionConfig] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.959--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.userrolemanagement.AppMenus] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.96--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.athena.shared.report.entity.ArtReportUI] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.961--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.UserAccessLevel] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.961--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.appbasicsetup.usermanagement.UserData] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.961--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The target entity (reference) class for the one to one mapping element [field user] is being defaulted to: class com.app.shared.appbasicsetup.usermanagement.User.
+[EL Config]: metadata: 2016-05-05 11:43:00.962--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.locationmanagement.AddressType] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.962--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.organization.contactmanagement.Title] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.962--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.shared.EntityAudit] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.963--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.SystemInfo] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.963--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.spartan.healthmeter.shared.SystemInfo] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.963--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The access type for the persistent class [class com.app.shared.EntityAudit] is set to [FIELD].
+[EL Config]: metadata: 2016-05-05 11:43:00.969--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.ArtPasswordPolicy] is being defaulted to: ArtPasswordPolicy.
+[EL Config]: metadata: 2016-05-05 11:43:00.981--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.PasswordAlgo] is being defaulted to: PasswordAlgo.
+[EL Config]: metadata: 2016-05-05 11:43:00.981--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.contactmanagement.ContactType] is being defaulted to: ContactType.
+[EL Config]: metadata: 2016-05-05 11:43:00.982--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogConnectorAttributes] is being defaulted to: ArtLogConnectorAttributes.
+[EL Config]: metadata: 2016-05-05 11:43:00.982--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.contactmanagement.CoreContacts] is being defaulted to: CoreContacts.
+[EL Config]: metadata: 2016-05-05 11:43:00.983--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.locationmanagement.City] is being defaulted to: City.
+[EL Config]: metadata: 2016-05-05 11:43:00.983--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogDetails] is being defaulted to: ArtLogDetails.
+[EL Config]: metadata: 2016-05-05 11:43:00.984--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.ArtPasswordAlgorithm] is being defaulted to: ArtPasswordAlgorithm.
+[EL Config]: metadata: 2016-05-05 11:43:00.984--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.SessionData] is being defaulted to: SessionData.
+[EL Config]: metadata: 2016-05-05 11:43:00.985--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appinsight.health.TestA] is being defaulted to: TestA.
+[EL Config]: metadata: 2016-05-05 11:43:00.985--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.aaa.ArtUserLastStatus] is being defaulted to: ArtUserLastStatus.
+[EL Config]: metadata: 2016-05-05 11:43:00.986--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.healthmeter.entity.ArtHealthStatusConfiguration] is being defaulted to: ArtHealthStatusConfiguration.
+[EL Config]: metadata: 2016-05-05 11:43:00.986--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.userrolemanagement.Roles] is being defaulted to: Roles.
+[EL Config]: metadata: 2016-05-05 11:43:00.987--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.locationmanagement.Country] is being defaulted to: Country.
+[EL Config]: metadata: 2016-05-05 11:43:00.988--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogConfig] is being defaulted to: ArtLogConfig.
+[EL Config]: metadata: 2016-05-05 11:43:00.988--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.athena.shared.dataengine.entity.ArtQuery] is being defaulted to: ArtQuery.
+[EL Config]: metadata: 2016-05-05 11:43:00.989--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.healthmeter.entity.ZenHealthGauge] is being defaulted to: ZenHealthGauge.
+[EL Config]: metadata: 2016-05-05 11:43:00.99--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogDomain] is being defaulted to: ArtLogDomain.
+[EL Config]: metadata: 2016-05-05 11:43:00.99--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.contactmanagement.Gender] is being defaulted to: Gender.
+[EL Config]: metadata: 2016-05-05 11:43:00.99--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogSeverity] is being defaulted to: ArtLogSeverity.
+[EL Config]: metadata: 2016-05-05 11:43:00.991--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.contactmanagement.CommunicationType] is being defaulted to: CommunicationType.
+[EL Config]: metadata: 2016-05-05 11:43:00.991--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.locationmanagement.Timezone] is being defaulted to: Timezone.
+[EL Config]: metadata: 2016-05-05 11:43:00.992--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.userrolemanagement.RoleMenuBridge] is being defaulted to: RoleMenuBridge.
+[EL Config]: metadata: 2016-05-05 11:43:00.992--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.PasswordPolicy] is being defaulted to: PasswordPolicy.
+[EL Config]: metadata: 2016-05-05 11:43:00.992--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogArchitectureLayer] is being defaulted to: ArtLogArchitectureLayer.
+[EL Warning]: metadata: 2016-05-05 11:43:00.993--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--You have specified multiple ids for the entity class [com.spartan.shared.alarms.entities.ArtLogArchitectureLayer] without specifying an @IdClass. By doing this you may lose the ability to find by identity, distributed cache support etc. Note: You may however use entity manager find operations by passing a list of primary key fields. Else, you will have to use JPQL queries to read your entities. For other id options see @PrimaryKey.
+[EL Config]: metadata: 2016-05-05 11:43:00.993--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.healthmeter.entity.HealthSchedulerConfiguration] is being defaulted to: HealthSchedulerConfiguration.
+[EL Config]: metadata: 2016-05-05 11:43:00.993--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogEventAction] is being defaulted to: ArtLogEventAction.
+[EL Warning]: metadata: 2016-05-05 11:43:00.994--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--You have specified multiple ids for the entity class [com.spartan.shared.alarms.entities.ArtLogEventAction] without specifying an @IdClass. By doing this you may lose the ability to find by identity, distributed cache support etc. Note: You may however use entity manager find operations by passing a list of primary key fields. Else, you will have to use JPQL queries to read your entities. For other id options see @PrimaryKey.
+[EL Config]: metadata: 2016-05-05 11:43:00.994--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.healthmeter.entity.ZenSchedulerHealth] is being defaulted to: ZenSchedulerHealth.
+[EL Config]: metadata: 2016-05-05 11:43:00.995--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.locationmanagement.Language] is being defaulted to: Language.
+[EL Config]: metadata: 2016-05-05 11:43:00.995--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.locationmanagement.Address] is being defaulted to: Address.
+[EL Config]: metadata: 2016-05-05 11:43:00.996--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogConnector] is being defaulted to: ArtLogConnector.
+[EL Config]: metadata: 2016-05-05 11:43:00.996--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.PassRecovery] is being defaulted to: PassRecovery.
+[EL Config]: metadata: 2016-05-05 11:43:00.997--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogAlarmEvents] is being defaulted to: ArtLogAlarmEvents.
+[EL Config]: metadata: 2016-05-05 11:43:00.998--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogAlarm] is being defaulted to: ArtLogAlarm.
+[EL Config]: metadata: 2016-05-05 11:43:00.998--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogBoundedContext] is being defaulted to: ArtLogBoundedContext.
+[EL Config]: metadata: 2016-05-05 11:43:00.998--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.LoginSession] is being defaulted to: LoginSession.
+[EL Config]: metadata: 2016-05-05 11:43:00.999--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.locationmanagement.State] is being defaulted to: State.
+[EL Config]: metadata: 2016-05-05 11:43:01.0--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.athena.server.email.entity.ArtAppNotificationTemplate] is being defaulted to: ArtAppNotificationTemplate.
+[EL Config]: metadata: 2016-05-05 11:43:01.0--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.UserAccessDomain] is being defaulted to: UserAccessDomain.
+[EL Config]: metadata: 2016-05-05 11:43:01.001--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.contactmanagement.CommunicationGroup] is being defaulted to: CommunicationGroup.
+[EL Config]: metadata: 2016-05-05 11:43:01.001--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.User] is being defaulted to: User.
+[EL Config]: metadata: 2016-05-05 11:43:01.002--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.healthmeter.entity.ZenHealthStatus] is being defaulted to: ZenHealthStatus.
+[EL Config]: metadata: 2016-05-05 11:43:01.003--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.contactmanagement.CommunicationData] is being defaulted to: CommunicationData.
+[EL Config]: metadata: 2016-05-05 11:43:01.003--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.userrolemanagement.UserRoleBridge] is being defaulted to: UserRoleBridge.
+[EL Config]: metadata: 2016-05-05 11:43:01.004--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogStatus] is being defaulted to: ArtLogStatus.
+[EL Warning]: metadata: 2016-05-05 11:43:01.004--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--You have specified multiple ids for the entity class [com.spartan.shared.alarms.entities.ArtLogStatus] without specifying an @IdClass. By doing this you may lose the ability to find by identity, distributed cache support etc. Note: You may however use entity manager find operations by passing a list of primary key fields. Else, you will have to use JPQL queries to read your entities. For other id options see @PrimaryKey.
+[EL Config]: metadata: 2016-05-05 11:43:01.005--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.Question] is being defaulted to: Question.
+[EL Config]: metadata: 2016-05-05 11:43:01.005--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.healthmeter.entity.ZenRequestDetails] is being defaulted to: ZenRequestDetails.
+[EL Config]: metadata: 2016-05-05 11:43:01.006--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.healthmeter.entity.ArtHealthSchedulerConfiguration] is being defaulted to: ArtHealthSchedulerConfiguration.
+[EL Config]: metadata: 2016-05-05 11:43:01.007--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.healthmeter.entity.ZenHealthCounter] is being defaulted to: ZenHealthCounter.
+[EL Config]: metadata: 2016-05-05 11:43:01.008--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.Login] is being defaulted to: Login.
+[EL Config]: metadata: 2016-05-05 11:43:01.008--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.healthmeter.entity.ZenHealth] is being defaulted to: ZenHealth.
+[EL Config]: metadata: 2016-05-05 11:43:01.01--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLoggingProperties] is being defaulted to: ArtLoggingProperties.
+[EL Config]: metadata: 2016-05-05 11:43:01.01--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.shared.alarms.entities.ArtLogException] is being defaulted to: ArtLogException.
+[EL Warning]: metadata: 2016-05-05 11:43:01.01--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--You have specified multiple ids for the entity class [com.spartan.shared.alarms.entities.ArtLogException] without specifying an @IdClass. By doing this you may lose the ability to find by identity, distributed cache support etc. Note: You may however use entity manager find operations by passing a list of primary key fields. Else, you will have to use JPQL queries to read your entities. For other id options see @PrimaryKey.
+[EL Config]: metadata: 2016-05-05 11:43:01.011--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.spartan.server.session.entity.AppSessionConfig] is being defaulted to: AppSessionConfig.
+[EL Config]: metadata: 2016-05-05 11:43:01.011--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.userrolemanagement.AppMenus] is being defaulted to: AppMenus.
+[EL Config]: metadata: 2016-05-05 11:43:01.012--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.athena.shared.report.entity.ArtReportUI] is being defaulted to: ArtReportUI.
+[EL Config]: metadata: 2016-05-05 11:43:01.012--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.UserAccessLevel] is being defaulted to: UserAccessLevel.
+[EL Config]: metadata: 2016-05-05 11:43:01.013--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.appbasicsetup.usermanagement.UserData] is being defaulted to: UserData.
+[EL Config]: metadata: 2016-05-05 11:43:01.013--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.locationmanagement.AddressType] is being defaulted to: AddressType.
+[EL Config]: metadata: 2016-05-05 11:43:01.014--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--The alias name for the entity class [class com.app.shared.organization.contactmanagement.Title] is being defaulted to: Title.
+[EL Info]: 2016-05-05 11:43:03.124--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.5.1.v20130918-f2b9fc5
+[EL Fine]: connection: 2016-05-05 11:43:03.347--Thread(Thread[Test worker,5,main])--Detected database platform: org.eclipse.persistence.platform.database.MySQLPlatform
+[EL Config]: connection: 2016-05-05 11:43:03.358--ServerSession(130103900)--Connection(1119182058)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.365--ServerSession(130103900)--Connection(433633089)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.365--ServerSession(130103900)--Connection(1659312552)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.37--ServerSession(130103900)--Connection(713772852)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.371--ServerSession(130103900)--Connection(536671422)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.376--ServerSession(130103900)--Connection(1926293810)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.376--ServerSession(130103900)--Connection(1904086145)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.382--ServerSession(130103900)--Connection(1998975233)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.382--ServerSession(130103900)--Connection(1542567363)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.388--ServerSession(130103900)--Connection(1239800089)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.388--ServerSession(130103900)--Connection(286268982)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.394--ServerSession(130103900)--Connection(842461350)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.394--ServerSession(130103900)--Connection(888224779)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.399--ServerSession(130103900)--Connection(1804426905)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.399--ServerSession(130103900)--Connection(238929401)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.405--ServerSession(130103900)--Connection(1948442798)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.406--ServerSession(130103900)--Connection(499972883)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.411--ServerSession(130103900)--Connection(1410698553)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.411--ServerSession(130103900)--Connection(1391117391)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.417--ServerSession(130103900)--Connection(685250087)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.417--ServerSession(130103900)--Connection(43413348)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.423--ServerSession(130103900)--Connection(1032452417)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.423--ServerSession(130103900)--Connection(759904759)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.429--ServerSession(130103900)--Connection(319524597)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.429--ServerSession(130103900)--Connection(1540784279)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.435--ServerSession(130103900)--Connection(1655561669)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.436--ServerSession(130103900)--Connection(79356704)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.441--ServerSession(130103900)--Connection(2062046523)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.441--ServerSession(130103900)--Connection(724816775)--Thread(Thread[Test worker,5,main])--connecting(DatabaseLogin(
+	platform=>MySQLPlatform
+	user name=> "pro2"
+	datasource URL=> "jdbc:mysql://localhost-MYSQL:3306/pro22"
+))
+[EL Config]: connection: 2016-05-05 11:43:03.447--ServerSession(130103900)--Connection(316935115)--Thread(Thread[Test worker,5,main])--Connected: jdbc:mysql://localhost-MYSQL:3306/pro22
+	User: pro2@172.17.0.4
+	Database: MySQL  Version: 5.7.7-rc
+	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[EL Config]: connection: 2016-05-05 11:43:03.448--ServerSession(130103900)--Connection(316935115)--Thread(Thread[Test worker,5,main])--disconnect
+[EL Warning]: metadata: 2016-05-05 11:43:03.456--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [timezone] for the entity class [class com.app.shared.organization.contactmanagement.CoreContacts] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2016-05-05 11:43:03.458--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [user] for the entity class [class com.app.shared.appbasicsetup.usermanagement.PassRecovery] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2016-05-05 11:43:03.458--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [coreContacts] for the entity class [class com.app.shared.appbasicsetup.usermanagement.Login] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2016-05-05 11:43:03.458--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [user] for the entity class [class com.app.shared.appbasicsetup.usermanagement.Login] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2016-05-05 11:43:03.46--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [user] for the entity class [class com.app.shared.appbasicsetup.usermanagement.UserData] since weaving was not enabled or did not occur.
+[EL Info]: connection: 2016-05-05 11:43:03.644--ServerSession(130103900)--Thread(Thread[Test worker,5,main])--file:/home/applifire/workspace/testlic1/build/resources/main_testlic1 login successful
+[EL Fine]: sql: 2016-05-05 11:43:11.426--ClientSession(1985835612)--Connection(2062046523)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE ((active_status = ?) AND (sql_query IS NULL))
+	bind => [true]
+Repository handle
+[EL Config]: connection: 2016-05-05 11:43:11.439--ServerSession(130103900)--Connection(2062046523)--Thread(Thread[Test worker,5,main])--disconnect
+[EL Fine]: sql: 2016-05-05 11:43:11.449--ClientSession(899265109)--Connection(1655561669)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE (query_id = ?)
+	bind => [09FEECCB-F43A-4F08-AD1A-33826B1FA0CE]
+[EL Fine]: sql: 2016-05-05 11:43:11.452--ClientSession(899265109)--Connection(1655561669)--Thread(Thread[Test worker,5,main])--UPDATE art_query SET sql_query = ? WHERE (query_id = ?)
+	bind => [SELECT dataId, appSessionId, booleanValue, customerId, dataType, dateTimeValue, jsonValue, numberValue, sessionKey, stringValue, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_SessionData_T WHERE ((activeStatus = ?) AND (appSessionId = ?)), 09FEECCB-F43A-4F08-AD1A-33826B1FA0CE]
+[EL Config]: connection: 2016-05-05 11:43:11.55--ServerSession(130103900)--Connection(1655561669)--Thread(Thread[Test worker,5,main])--disconnect
+[EL Fine]: sql: 2016-05-05 11:43:11.559--ClientSession(387951720)--Connection(319524597)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE (query_id = ?)
+	bind => [266D5DFE-7201-4E2B-BA21-5AE8E16A1192]
+[EL Fine]: sql: 2016-05-05 11:43:11.563--ClientSession(387951720)--Connection(319524597)--Thread(Thread[Test worker,5,main])--UPDATE art_query SET sql_query = ? WHERE (query_id = ?)
+	bind => [SELECT anm, ano, total, ano1 FROM ast_TestA_T, 266D5DFE-7201-4E2B-BA21-5AE8E16A1192]
+[EL Config]: connection: 2016-05-05 11:43:11.682--ServerSession(130103900)--Connection(319524597)--Thread(Thread[Test worker,5,main])--disconnect
+[EL Fine]: sql: 2016-05-05 11:43:11.695--ClientSession(681447595)--Connection(1032452417)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE (query_id = ?)
+	bind => [3B002314-776D-49BC-9B29-479ED63A1146]
+[EL Fine]: sql: 2016-05-05 11:43:11.698--ClientSession(681447595)--Connection(1032452417)--Thread(Thread[Test worker,5,main])--UPDATE art_query SET sql_query = ? WHERE (query_id = ?)
+	bind => [SELECT healthId, scheduledDateTime, serverInstanceId, serverIpAddress, ROUND((? - ((usedSpace / totalSpace) * ?))), ROUND(((usedSpace / totalSpace) * ?)), ROUND(((totalSpace / ?) / ?)), status FROM zen_health_status ORDER BY scheduledDateTime DESC, 3B002314-776D-49BC-9B29-479ED63A1146]
+[EL Config]: connection: 2016-05-05 11:43:11.807--ServerSession(130103900)--Connection(1032452417)--Thread(Thread[Test worker,5,main])--disconnect
+[EL Fine]: sql: 2016-05-05 11:43:11.816--ClientSession(1636638464)--Connection(685250087)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE (query_id = ?)
+	bind => [6210BECC-3BEC-4D4A-9497-6364865B0DB1]
+[EL Fine]: sql: 2016-05-05 11:43:11.818--ClientSession(1636638464)--Connection(685250087)--Thread(Thread[Test worker,5,main])--UPDATE art_query SET sql_query = ? WHERE (query_id = ?)
+	bind => [SELECT CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(t0.firstName, ?), t2.ipAddress), ?), t2.requestId), ?), t2.appSessionId), t2.requestId, t2.className, t2.requestTime, t2.requestMethod, t2.httpStatus, t2.returnStatus, t2.executionTime, t2.methodName, t2.startTime, t2.endTime, t2.typeofClass, t2.callSeqId, t2.exceptionId, t2.userId, t2.appSessionId FROM ast_User_T t3, zen_request_details t2, ast_Login_T t1, ast_CoreContacts_T t0 WHERE ((((t3.userId = t2.userId) AND (t2.requestTime >= ?)) AND (t2.requestTime <= ?)) AND ((t3.userId = t1.userId) AND (t0.contactId = t1.contactId))) ORDER BY t2.requestTime DESC, t2.requestId, t2.callSeqId ASC, 6210BECC-3BEC-4D4A-9497-6364865B0DB1]
+[EL Config]: connection: 2016-05-05 11:43:12.411--ServerSession(130103900)--Connection(685250087)--Thread(Thread[Test worker,5,main])--disconnect
+[EL Fine]: sql: 2016-05-05 11:43:12.415--ClientSession(1247445563)--Connection(1410698553)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE (query_id = ?)
+	bind => [738A11F8-A28C-462C-9E9D-1899195A4E65]
+[EL Fine]: sql: 2016-05-05 11:43:12.416--ClientSession(1247445563)--Connection(1410698553)--Thread(Thread[Test worker,5,main])--UPDATE art_query SET sql_query = ? WHERE (query_id = ?)
+	bind => [SELECT t0.loginPk, t0.failedLoginAttempts, t0.loginId, t0.serverAuthImage, t0.serverAuthText, t0.versionId, t0.createdBy, t0.createdDate, t0.updatedBy, t0.updatedDate, t0.activeStatus, t0.txnAccessCode, t0.contactId, t0.userId FROM ast_Login_T t0, ast_User_T t1 WHERE (((t0.activeStatus = ?) AND t1.userId IN (SELECT t2.userId FROM ast_UserRoleBridge_T t2)) AND (t1.userId = t0.userId)), 738A11F8-A28C-462C-9E9D-1899195A4E65]
+[EL Config]: connection: 2016-05-05 11:43:12.501--ServerSession(130103900)--Connection(1410698553)--Thread(Thread[Test worker,5,main])--disconnect
+[EL Fine]: sql: 2016-05-05 11:43:12.506--ClientSession(1840943140)--Connection(1948442798)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE (query_id = ?)
+	bind => [99A0EFC3-68D2-46CA-BBB3-C0DA98F639F6]
+[EL Fine]: sql: 2016-05-05 11:43:12.509--ClientSession(1840943140)--Connection(1948442798)--Thread(Thread[Test worker,5,main])--UPDATE art_query SET sql_query = ? WHERE (query_id = ?)
+	bind => [DELETE FROM ast_SessionData_T WHERE ((activeStatus = ?) AND (appSessionId = ?)), 99A0EFC3-68D2-46CA-BBB3-C0DA98F639F6]
+[EL Config]: connection: 2016-05-05 11:43:12.551--ServerSession(130103900)--Connection(1948442798)--Thread(Thread[Test worker,5,main])--disconnect
+[EL Fine]: sql: 2016-05-05 11:43:12.556--ClientSession(1555454240)--Connection(1804426905)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE (query_id = ?)
+	bind => [9D372193-6CFE-434F-A41E-5652956CCD4A]
+[EL Fine]: sql: 2016-05-05 11:43:12.559--ClientSession(1555454240)--Connection(1804426905)--Thread(Thread[Test worker,5,main])--UPDATE art_query SET sql_query = ? WHERE (query_id = ?)
+	bind => [SELECT t0.loginPk, t0.failedLoginAttempts, t0.loginId, t0.serverAuthImage, t0.serverAuthText, t0.versionId, t0.createdBy, t0.createdDate, t0.updatedBy, t0.updatedDate, t0.activeStatus, t0.txnAccessCode, t0.contactId, t0.userId FROM ast_Login_T t0, ast_User_T t1 WHERE (((t0.activeStatus = ?) AND t1.userId NOT IN (SELECT t2.userId FROM ast_UserRoleBridge_T t2)) AND (t1.userId = t0.userId)), 9D372193-6CFE-434F-A41E-5652956CCD4A]
+[EL Config]: connection: 2016-05-05 11:43:12.599--ServerSession(130103900)--Connection(1804426905)--Thread(Thread[Test worker,5,main])--disconnect
+[EL Fine]: sql: 2016-05-05 11:43:12.612--ClientSession(1780473245)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE (query_id = ?)
+	bind => [DC370603-C95C-42F8-9CC8-8799010F7C0E]
+[EL Fine]: sql: 2016-05-05 11:43:12.615--ClientSession(1780473245)--Connection(842461350)--Thread(Thread[Test worker,5,main])--UPDATE art_query SET sql_query = ? WHERE (query_id = ?)
+	bind => [SELECT monitorId, scheduledDateTime, serverInstanceId, serverIpAddress, totalClass, classLoaded, classUnloaded, gcCollectionTime, gcMemoryName, ((nonHeapCommitted / ?) / ?), ((nonHeapUsed / ?) / ?), ((heapCommitted / ?) / ?), ((maxMemory / ?) / ?), (? - ((usedMemory / totalMemory) * ?)), ((heapUsed / ?) / ?), ((totalMemory / ?) / ?), startTime, upTime, cpuTime, ((freePhysicalSize / ?) / ?), ((totalPhysicalMemorySize / ?) / ?), cpuLoadTime, ROUND(((freeSwapSize / ?) / ?)), systemLoadAverage, ROUND(((totalSwapSize / ?) / ?)), availableProcessor, totalThread, threadPeakCount, threadStartedCount, threadDaemonCount, threadCpuTime, threadUserTime, cpuLoad, ((usedMemory / totalMemory) * ?), ((usedSwapSize / ?) / ?), ((usedPhysicalMemory / ?) / ?) FROM zen_health ORDER BY scheduledDateTime DESC, DC370603-C95C-42F8-9CC8-8799010F7C0E]
+[EL Fine]: sql: 2016-05-05 11:43:12.736--ClientSession(1101081855)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT query_id, active_status, app_creator_id, created_by, created_date, hidden_name, jpql_query, name, project_id, project_version_id, query_json, query_type, sql_query, updated_by, updated_date, user_access, version_id FROM art_query WHERE (query_id = ?)
+	bind => [EF560E86-51EB-4580-AAA4-684C3C982978]
+[EL Fine]: sql: 2016-05-05 11:43:12.739--ClientSession(1101081855)--Connection(842461350)--Thread(Thread[Test worker,5,main])--UPDATE art_query SET sql_query = ? WHERE (query_id = ?)
+	bind => [SELECT dataId, appSessionId, booleanValue, customerId, dataType, dateTimeValue, jsonValue, numberValue, sessionKey, stringValue, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_SessionData_T WHERE (((activeStatus = ?) AND (appSessionId = ?)) AND (sessionKey = ?)), EF560E86-51EB-4580-AAA4-684C3C982978]
+Setting logged in user info for ADD
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI312100100 Alarm Split = AIS-HI-3-1-2-100-100
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI322100200 Alarm Split = AIS-HI-3-2-2-100-200
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI312100100 Alarm Split = AIS-HI-3-1-2-100-100
+[EL Fine]: sql: 2016-05-05 11:43:21.517--ClientSession(891014698)--Connection(842461350)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_TestA_T (aid, anm, ano, ano1, total, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [1B63D934-465F-47CE-8BF8-E1D69A6D4C7F, 8naIVjIOGY2jnsiePr9eTIWAVqR90VJnzlkZWG6ibGu10HNnBV, 2147483647, 2147483647, 2147483647, 1, AAAAA, 2016-05-05 11:43:21.477, AAAAA, 2016-05-05 11:43:21.477, 1, 51000]
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI314100100 Alarm Split = AIS-HI-3-1-4-100-100
+[EL Fine]: sql: 2016-05-05 11:43:21.57--ClientSession(82783345)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT aid, anm, ano, ano1, total, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_TestA_T WHERE ((activeStatus = ?) AND (aid = ?))
+	bind => [1, 1B63D934-465F-47CE-8BF8-E1D69A6D4C7F]
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI324100200 Alarm Split = AIS-HI-3-2-4-100-200
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI314100100 Alarm Split = AIS-HI-3-1-4-100-100
+Setting logged in user info for UPDATE
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI311100100 Alarm Split = AIS-HI-3-1-1-100-100
+[EL Fine]: sql: 2016-05-05 11:43:21.586--ClientSession(1706311072)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT aid, anm, ano, ano1, total, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_TestA_T WHERE (aid = ?)
+	bind => [1B63D934-465F-47CE-8BF8-E1D69A6D4C7F]
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI321100200 Alarm Split = AIS-HI-3-2-1-100-200
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI311100100 Alarm Split = AIS-HI-3-1-1-100-100
+[EL Fine]: sql: 2016-05-05 11:43:21.591--ClientSession(1706311072)--Connection(842461350)--Thread(Thread[Test worker,5,main])--UPDATE ast_TestA_T SET anm = ?, versionId = ? WHERE ((aid = ?) AND (versionId = ?))
+	bind => [CqURL5JSw42SXUnu6Nn1tRS6CP3dmRm4xRbC4MxI8TOxrRkA6y, 2, 1B63D934-465F-47CE-8BF8-E1D69A6D4C7F, 1]
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI314100100 Alarm Split = AIS-HI-3-1-4-100-100
+[EL Fine]: sql: 2016-05-05 11:43:21.731--ClientSession(1335874636)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT aid, anm, ano, ano1, total, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_TestA_T WHERE ((activeStatus = ?) AND (aid = ?))
+	bind => [1, 1B63D934-465F-47CE-8BF8-E1D69A6D4C7F]
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI324100200 Alarm Split = AIS-HI-3-2-4-100-200
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI314100100 Alarm Split = AIS-HI-3-1-4-100-100
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI318100100 Alarm Split = AIS-HI-3-1-8-100-100
+[EL Fine]: sql: 2016-05-05 11:43:21.799--ClientSession(1079651649)--Connection(842461350)--Thread(Thread[Test worker,5,main])--SELECT aid, anm, ano, ano1, total, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_TestA_T WHERE (aid = ?)
+	bind => [1B63D934-465F-47CE-8BF8-E1D69A6D4C7F]
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI328100200 Alarm Split = AIS-HI-3-2-8-100-200
+Thu May 05 11:43:21 UTC 2016|Unknown Alarm = AISHI318100100 Alarm Split = AIS-HI-3-1-8-100-100
+[EL Fine]: sql: 2016-05-05 11:43:21.804--ClientSession(1079651649)--Connection(842461350)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_TestA_T WHERE ((aid = ?) AND (versionId = ?))
+	bind => [1B63D934-465F-47CE-8BF8-E1D69A6D4C7F, 2]
+]]></system-out>
+  <system-err><![CDATA[log4j:WARN No appenders could be found for logger (org.springframework.test.context.junit4.SpringJUnit4ClassRunner).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+java.io.FileNotFoundException: /home/applifire/workspace/customers/logs/log_customer.log (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at java.io.FileWriter.<init>(FileWriter.java:107)
+	at com.spartan.logger.connectors.file.LogFileHandler.createNewFile(LogFileHandler.java:84)
+	at com.spartan.logger.connectors.file.LogFileHandler.prepareFile(LogFileHandler.java:61)
+	at com.spartan.logger.connectors.file.LogFileHandler.<init>(LogFileHandler.java:29)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:62)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+Exception in thread "Timer-6" java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.run(LogFileHandler.java:121)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.io.FileNotFoundException: /home/applifire/workspace/customers/logs/log_AAAA.log (No such file or directory)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at java.io.FileWriter.<init>(FileWriter.java:107)
+	at com.spartan.logger.connectors.file.LogFileHandler.createNewFile(LogFileHandler.java:84)
+	at com.spartan.logger.connectors.file.LogFileHandler.prepareFile(LogFileHandler.java:61)
+	at com.spartan.logger.connectors.file.LogFileHandler.<init>(LogFileHandler.java:29)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:62)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+Exception in thread "Timer-8" java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.run(LogFileHandler.java:121)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+com.app.shared.appinsight.health.TestA.anm may not be null
+com.spartan.pluggable.exception.security.InvalidDataException: 90007:Invalid Exception.:Reason = Not Available!
+	at com.athena.server.pluggable.utils.helper.EntityValidatorHelper.validateEntity(EntityValidatorHelper.java:28)
+	at com.app.shared.appinsight.health.TestA.isValid(TestA.java:189)
+	at com.app.server.service.appinsight.health.TestATestCase.validateTestA(TestATestCase.java:185)
+	at com.app.server.service.appinsight.health.TestATestCase.test5NegativeTesting(TestATestCase.java:219)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+com.app.shared.appinsight.health.TestA.anm size must be between 1 and 256
+com.spartan.pluggable.exception.security.InvalidDataException: 90007:Invalid Exception.:Reason = Not Available!
+	at com.athena.server.pluggable.utils.helper.EntityValidatorHelper.validateEntity(EntityValidatorHelper.java:28)
+	at com.app.shared.appinsight.health.TestA.isValid(TestA.java:189)
+	at com.app.server.service.appinsight.health.TestATestCase.validateTestA(TestATestCase.java:183)
+	at com.app.server.service.appinsight.health.TestATestCase.test5NegativeTesting(TestATestCase.java:224)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+com.app.shared.appinsight.health.TestA.ano may not be null
+com.spartan.pluggable.exception.security.InvalidDataException: 90007:Invalid Exception.:Reason = Not Available!
+	at com.athena.server.pluggable.utils.helper.EntityValidatorHelper.validateEntity(EntityValidatorHelper.java:28)
+	at com.app.shared.appinsight.health.TestA.isValid(TestA.java:189)
+	at com.app.server.service.appinsight.health.TestATestCase.validateTestA(TestATestCase.java:185)
+	at com.app.server.service.appinsight.health.TestATestCase.test5NegativeTesting(TestATestCase.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+com.app.shared.appinsight.health.TestA.total may not be null
+com.spartan.pluggable.exception.security.InvalidDataException: 90007:Invalid Exception.:Reason = Not Available!
+	at com.athena.server.pluggable.utils.helper.EntityValidatorHelper.validateEntity(EntityValidatorHelper.java:28)
+	at com.app.shared.appinsight.health.TestA.isValid(TestA.java:189)
+	at com.app.server.service.appinsight.health.TestATestCase.validateTestA(TestATestCase.java:185)
+	at com.app.server.service.appinsight.health.TestATestCase.test5NegativeTesting(TestATestCase.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+com.app.shared.appinsight.health.TestA.ano1 may not be null
+com.spartan.pluggable.exception.security.InvalidDataException: 90007:Invalid Exception.:Reason = Not Available!
+	at com.athena.server.pluggable.utils.helper.EntityValidatorHelper.validateEntity(EntityValidatorHelper.java:28)
+	at com.app.shared.appinsight.health.TestA.isValid(TestA.java:189)
+	at com.app.server.service.appinsight.health.TestATestCase.validateTestA(TestATestCase.java:185)
+	at com.app.server.service.appinsight.health.TestATestCase.test5NegativeTesting(TestATestCase.java:242)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+java.lang.NullPointerException
+	at com.spartan.logger.connectors.file.LogFileHandler.writeData(LogFileHandler.java:109)
+	at com.spartan.logger.connectors.file.FileConnector.writeData(FileConnector.java:69)
+	at com.spartan.logger.connectors.file.FileConnector.writeLog(FileConnector.java:51)
+	at com.spartan.logger.core.queue.QueueConsumer.consumeAlarm(QueueConsumer.java:76)
+	at com.spartan.logger.core.queue.QueueConsumer.run(QueueConsumer.java:41)
+	at java.lang.Thread.run(Thread.java:745)
+]]></system-err>
+</testsuite>

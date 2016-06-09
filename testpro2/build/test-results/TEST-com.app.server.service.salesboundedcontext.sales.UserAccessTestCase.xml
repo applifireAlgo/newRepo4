@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.app.server.service.salesboundedcontext.sales.UserAccessTestCase" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-05-12T07:44:17" hostname="8492733ddfac" time="0.818">
+  <properties/>
+  <testcase name="test1Save" classname="com.app.server.service.salesboundedcontext.sales.UserAccessTestCase" time="0.502"/>
+  <testcase name="test2Update" classname="com.app.server.service.salesboundedcontext.sales.UserAccessTestCase" time="0.024"/>
+  <testcase name="test3FindById" classname="com.app.server.service.salesboundedcontext.sales.UserAccessTestCase" time="0.011"/>
+  <testcase name="test3findByregion" classname="com.app.server.service.salesboundedcontext.sales.UserAccessTestCase" time="0.015"/>
+  <testcase name="test3findByuserId" classname="com.app.server.service.salesboundedcontext.sales.UserAccessTestCase" time="0.014"/>
+  <testcase name="test5NegativeTesting" classname="com.app.server.service.salesboundedcontext.sales.UserAccessTestCase" time="0.007"/>
+  <testcase name="test6Delete" classname="com.app.server.service.salesboundedcontext.sales.UserAccessTestCase" time="0.242"/>
+  <system-out><![CDATA[Thu May 12 07:44:17 UTC 2016|Log Manager Factory|Initialization Process started.....
+Thu May 12 07:44:17 UTC 2016|Log Manager|Initialized with Path = [/home/applifire/workspace/testpro2/src/main/webapp/WEB-INF/conf]
+Thu May 12 07:44:17 UTC 2016|Alarm Manager|Initialized with Path = [/home/applifire/workspace/testpro2/src/main/webapp/WEB-INF/conf]
+Thu May 12 07:44:17 UTC 2016|Alarm Manager|Loading Alarms ......
+Thu May 12 07:44:17 UTC 2016|Alarm XML Parser|FWA|XML Parsing Complete........ 
+Thu May 12 07:44:17 UTC 2016|Alarm File Manager|FWA|Alarm File Status.. [ApplicationFrameworkAlarms.xml]|Version=15|Status=Done 
+Thu May 12 07:44:17 UTC 2016|Alarm File Manager|FWA|Alarm Stats = ( BC/AL=4/374 SYS=4/9 [374/0]  TPL=0/0 [0/0]  APP= A.Map=[453]  E.Map EC/RC=[151/40] )
+Thu May 12 07:44:17 UTC 2016|Alarm XML Parser|APP|XML Parsing Complete........ 
+Thu May 12 07:44:17 UTC 2016|Alarm File Manager|APP|Alarm File Status.. [ApplicationAlarms.xml]|Version=1|Status=Done 
+Thu May 12 07:44:17 UTC 2016|Alarm File Manager|APP|Alarm Stats = ( BC/AL=5/453 SYS=4/9 [374/0]  TPL=0/0 [0/0]  APP=1/1 [79/0]  A.Map=[532]  E.Map EC/RC=[198/50] )
+Thu May 12 07:44:17 UTC 2016|ApplicationAlarmContext| <><><><><> Create App Alarms ....  <><><><><> 
+Thu May 12 07:44:17 UTC 2016|ApplicationAlarmContext|Alarms are generated ONLY in Development Mode.. 
+Thu May 12 07:44:17 UTC 2016|Alarm Manager|APP|Alarm Stats = ( BC/AL=5/453 SYS=4/9 [374/0]  TPL=0/0 [0/0]  APP=1/1 [79/0]  A.Map=[532]  E.Map EC/RC=[198/50] )
+Thu May 12 07:44:17 UTC 2016|Alarm Manager|Initialized Exception Lookup...
+Thu May 12 07:44:17 UTC 2016|Log Manager|Initialize Log Config File ......
+Thu May 12 07:44:17 UTC 2016|Pluggable Connectors|Adding Connectors : StandardOutputConnector isEnabled=true isDefault=false isFallBack=true
+Thu May 12 07:44:17 UTC 2016|Pluggable Connectors|Adding Connectors : StandardFileConnector isEnabled=true isDefault=false isFallBack=false
+Thu May 12 07:44:17 UTC 2016|Pluggable Connectors|Adding Connectors : Sprinkler isEnabled=true isDefault=true isFallBack=false
+Thu May 12 07:44:17 UTC 2016|Pluggable Connectors|Default Connector Name : com.spartan.logger.core.LogMessenger
+Thu May 12 07:44:17 UTC 2016|Log Config Parser|Connector Least Log Level =[4]  FallBack Log Level =[3]
+Thu May 12 07:44:17 UTC 2016|Log Manager|Loading Default Connector for Logging ......
+Thu May 12 07:44:17 UTC 2016|Log Manager|Loading class .. com.spartan.logger.core.LogMessenger
+Thu May 12 07:44:17 UTC 2016|Plugggable Connector|Connector class com.spartan.logger.core.LogMessenger Initialized... @ Log Level = 3
+Thu May 12 07:44:17 UTC 2016|Log Manager|Starting the Default Connector [com.spartan.logger.core.LogMessenger@236cdcee] ....
+Thu May 12 07:44:17 UTC 2016|Scheduler|Starting the Scheduler ......
+Thu May 12 07:44:17 UTC 2016|Scheduler|Adding [LMID=[1dc132a4-8ba9-4fa9-974d-261db1ddfbd5]] Delay=5 Time Unit=MINUTES
+Thu May 12 07:44:17 UTC 2016|Scheduler|Adding [App Alarm Manager File=[ApplicationAlarms.xml]] Delay=30 Time Unit=MINUTES
+Thu May 12 07:44:17 UTC 2016|Scheduler|Adding [FW Alarm Manager File=[ApplicationFrameworkAlarms.xml]] Delay=3 Time Unit=MINUTES
+Thu May 12 07:44:17 UTC 2016|Scheduler|Startup Completed..
+Thu May 12 07:44:17 UTC 2016|Log Manager|Initialization Process Complete ......
+Thu May 12 07:44:17 UTC 2016|Log Manager Factory|Log Manager READY! ID = 1dc132a4-8ba9-4fa9-974d-261db1ddfbd5
+[EL Fine]: sql: 2016-05-12 07:44:17.755--ClientSession(1289167161)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_SalesRegion_M (regioncode, regionname, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [E68D6D0C-CD0F-4A25-932F-A103F75B6B85, KmayB64G9yATEtItclKwQFFE9FnBV4dabfh3QqdJV0l31T5HYh, 1, AAAAA, 2016-05-12 07:44:17.752, AAAAA, 2016-05-12 07:44:17.752, 1, 51000]
+Thu May 12 07:44:17 UTC 2016|Unknown Alarm = ABSUM317100100 Alarm Split = ABS-UM-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:17.813--ClientSession(908477165)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessDomain_M (userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [998CF97C-97BC-4E34-A442-22C1B43DD51F, 3vzxOC22DESAGbYSFeraWj9myA0gOU6lTpQUFvTkjZJYWGH9cb, 9iN2xrEZf8kEYIK0NH01ok4eVFFxx17DjsJnSm0G2fAbGxSV6j, LpyW07Q446uBk0aROEZQVvMepzfPnxa3PyQsuHcQTAEA4dYD1B, 00MekG6bkTI5XHH1czwKZZU8GlPimEGd0z1wgIxwYW9inD3L35, 16019, 1, AAAAA, 2016-05-12 07:44:17.803, AAAAA, 2016-05-12 07:44:17.803, 1, 51000]
+Thu May 12 07:44:17 UTC 2016|Unknown Alarm = ABSUM317100100 Alarm Split = ABS-UM-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:17.907--ClientSession(2020954732)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccessLevel_M (userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [1D7FEF27-D894-419F-865F-A77DC49C754C, 2FRsx2fZmVF8hTWr3jCPhyX58VLRfjafpVZd3KUOeh4EgP3R2Y, OO22CPqGP7y8fyxXY89Yy6Dh82CSHh9HsYl6PXIuEgGQt6U76i, XxY1p6npYeOCL91sboT9oEu52O7LZT3tdq0l99wnPYinxceqwT, NJwgtI4cfNuNPuMNz4Dpmh641BcoosMvPk4P4OjGAq5q1s9xnS, 50675, 1, AAAAA, 2016-05-12 07:44:17.898, AAAAA, 2016-05-12 07:44:17.898, 1, 51000]
+Thu May 12 07:44:17 UTC 2016|Unknown Alarm = ABSUM317100100 Alarm Split = ABS-UM-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:17.928--ClientSession(785335254)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_Question_M (questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [3A4AC4C0-FCB8-44EF-9401-C8C1DC8B17AD, 11, HdVXQxTADGKXnrM92oUrBZJfhJ94j9a4x3uWsgI1IzTqHZs8SC, UR52ap2fI5, E7c3cZm8DSCV6UWM7cE5QbQAv80VjzT8ioOPqbURmKSdLDatvx, 1, AAAAA, 2016-05-12 07:44:17.92, AAAAA, 2016-05-12 07:44:17.92, 1, 51000]
+Thu May 12 07:44:17 UTC 2016|Unknown Alarm = ABSUM317100100 Alarm Split = ABS-UM-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:17.994--ClientSession(1347477252)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_User_T (userId, allowMultipleLogin, changePasswordNextLogin, genTempOneTimePassword, isDeleted, isLocked, lastPasswordChangeDate, multiFactorAuthEnabled, passwordAlgo, passwordExpiryDate, sessionTimeout, userAccessCode, userAccessDomainId, userAccessLevelId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [DF305AD5-F3AA-4837-B8FB-3E5CA95B1F8B, 1, 1, 1, 1, 1, 2016-05-12 06:44:05.796, 1, a5vlMGFt0iYuRUpqWQxxS0mO0aidE5ENopEkrfPrCWIFTHH28Y, 2016-05-12 06:44:05.758, 2629, 42698, 998CF97C-97BC-4E34-A442-22C1B43DD51F, 1D7FEF27-D894-419F-865F-A77DC49C754C, 1, AAAAA, 2016-05-12 07:44:17.803, AAAAA, 2016-05-12 07:44:17.803, 1, 51000]
+[EL Fine]: sql: 2016-05-12 07:44:17.998--ClientSession(1347477252)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_PassRecovery_TP (passRecoveryId, answer, questionId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode, userId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [D3741A1B-80D2-43FA-9779-982C3FB51D3C, nfELQXZPwYwOY3AA5hOwZMxmaYjOqIp7j7WLg317iyQi5fZztC, 3A4AC4C0-FCB8-44EF-9401-C8C1DC8B17AD, 1, AAAAA, 2016-05-12 07:44:17.92, AAAAA, 2016-05-12 07:44:17.92, 1, 51000, DF305AD5-F3AA-4837-B8FB-3E5CA95B1F8B]
+[EL Fine]: sql: 2016-05-12 07:44:18.002--ClientSession(1347477252)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserData_TP (userDataId, last5Passwords, oneTimePassword, oneTimePasswordExpiry, oneTimePasswordGenDate, password, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode, userId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [5F0B1FC9-ABAA-4389-8C4E-50D7EFE33C5B, F84RJ1n6ttOdhmHwuQOm4Ly73t6lcZY9M6WEtMgloddRhO7Uvr, 8ks3PCKkcz3lQtSn9wHGOubfl455UUaz, 6, 2016-05-12 06:44:06.063, TpqdqPQhUY3dwHmJMIwJjLN727FlgwbQWeG9gSwicfqi8WQDzU, 1, AAAAA, 2016-05-12 07:44:17.965, AAAAA, 2016-05-12 07:44:17.965, 1, 51000, DF305AD5-F3AA-4837-B8FB-3E5CA95B1F8B]
+Setting logged in user info for ADD
+[EL Fine]: sql: 2016-05-12 07:44:18.142--ClientSession(382446238)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT AST_USERACCESS_M_seq.NEXTVAL FROM DUAL
+[EL Fine]: sql: 2016-05-12 07:44:18.145--ClientSession(382446238)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--INSERT INTO ast_UserAccess_M (userAccessId, region, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [6, E68D6D0C-CD0F-4A25-932F-A103F75B6B85, DF305AD5-F3AA-4837-B8FB-3E5CA95B1F8B, 1, AAAAA, 2016-05-12 07:44:18.137, AAAAA, 2016-05-12 07:44:18.137, 1, 51000]
+[EL Fine]: sql: 2016-05-12 07:44:18.227--ClientSession(436643142)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userAccessId, region, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccess_M WHERE ((activeStatus = ?) AND (userAccessId = ?))
+	bind => [1, 6]
+Setting logged in user info for UPDATE
+[EL Fine]: sql: 2016-05-12 07:44:18.236--ClientSession(2075074886)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userAccessId, region, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccess_M WHERE (userAccessId = ?)
+	bind => [6]
+[EL Fine]: sql: 2016-05-12 07:44:18.249--ClientSession(1563439577)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userAccessId, region, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccess_M WHERE ((activeStatus = ?) AND (userAccessId = ?))
+	bind => [1, 6]
+[EL Fine]: sql: 2016-05-12 07:44:18.261--ClientSession(665175366)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userAccessId, region, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccess_M WHERE ((activeStatus = ?) AND (region = ?))
+	bind => [1, E68D6D0C-CD0F-4A25-932F-A103F75B6B85]
+[EL Fine]: sql: 2016-05-12 07:44:18.276--ClientSession(1846488803)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userAccessId, region, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccess_M WHERE ((activeStatus = ?) AND (userId = ?))
+	bind => [1, DF305AD5-F3AA-4837-B8FB-3E5CA95B1F8B]
+[EL Fine]: sql: 2016-05-12 07:44:18.297--ClientSession(2115348668)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userAccessId, region, userId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccess_M WHERE (userAccessId = ?)
+	bind => [6]
+[EL Fine]: sql: 2016-05-12 07:44:18.299--ClientSession(2115348668)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserAccess_M WHERE ((userAccessId = ?) AND (versionId = ?))
+	bind => [6, 1]
+[EL Fine]: sql: 2016-05-12 07:44:18.336--ClientSession(1367549551)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userId, allowMultipleLogin, changePasswordNextLogin, genTempOneTimePassword, isDeleted, isLocked, lastPasswordChangeDate, multiFactorAuthEnabled, passwordAlgo, passwordExpiryDate, sessionTimeout, userAccessCode, userAccessDomainId, userAccessLevelId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_User_T WHERE (userId = ?)
+	bind => [DF305AD5-F3AA-4837-B8FB-3E5CA95B1F8B]
+[EL Fine]: sql: 2016-05-12 07:44:18.341--ClientSession(1367549551)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userDataId, last5Passwords, oneTimePassword, oneTimePasswordExpiry, oneTimePasswordGenDate, password, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode, userId FROM ast_UserData_TP WHERE (userId = ?)
+	bind => [DF305AD5-F3AA-4837-B8FB-3E5CA95B1F8B]
+[EL Fine]: sql: 2016-05-12 07:44:18.351--ClientSession(1367549551)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT passRecoveryId, answer, questionId, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode, userId FROM ast_PassRecovery_TP WHERE (userId = ?)
+	bind => [DF305AD5-F3AA-4837-B8FB-3E5CA95B1F8B]
+Thu May 12 07:44:18 UTC 2016|Unknown Alarm = ABSUM317100100 Alarm Split = ABS-UM-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:18.361--ClientSession(1367549551)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserData_TP WHERE ((userDataId = ?) AND (versionId = ?))
+	bind => [5F0B1FC9-ABAA-4389-8C4E-50D7EFE33C5B, 1]
+[EL Fine]: sql: 2016-05-12 07:44:18.364--ClientSession(1367549551)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_PassRecovery_TP WHERE ((passRecoveryId = ?) AND (versionId = ?))
+	bind => [D3741A1B-80D2-43FA-9779-982C3FB51D3C, 1]
+[EL Fine]: sql: 2016-05-12 07:44:18.367--ClientSession(1367549551)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_User_T WHERE ((userId = ?) AND (versionId = ?))
+	bind => [DF305AD5-F3AA-4837-B8FB-3E5CA95B1F8B, 1]
+[EL Fine]: sql: 2016-05-12 07:44:18.409--ClientSession(1486210008)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT questionId, levelid, question, questionDetails, questionIcon, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_Question_M WHERE (questionId = ?)
+	bind => [3A4AC4C0-FCB8-44EF-9401-C8C1DC8B17AD]
+Thu May 12 07:44:18 UTC 2016|Unknown Alarm = ABSUM317100100 Alarm Split = ABS-UM-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:18.417--ClientSession(1486210008)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_Question_M WHERE ((questionId = ?) AND (versionId = ?))
+	bind => [3A4AC4C0-FCB8-44EF-9401-C8C1DC8B17AD, 1]
+[EL Fine]: sql: 2016-05-12 07:44:18.446--ClientSession(1027857259)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userAccessLevelId, levelDescription, levelHelp, levelIcon, levelName, userAccessLevel, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessLevel_M WHERE (userAccessLevelId = ?)
+	bind => [1D7FEF27-D894-419F-865F-A77DC49C754C]
+Thu May 12 07:44:18 UTC 2016|Unknown Alarm = ABSUM317100100 Alarm Split = ABS-UM-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:18.451--ClientSession(1027857259)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserAccessLevel_M WHERE ((userAccessLevelId = ?) AND (versionId = ?))
+	bind => [1D7FEF27-D894-419F-865F-A77DC49C754C, 1]
+[EL Fine]: sql: 2016-05-12 07:44:18.466--ClientSession(1241807319)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT userAccessDomainId, domainDescription, domainHelp, domainIcon, domainName, userAccessDomain, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_UserAccessDomain_M WHERE (userAccessDomainId = ?)
+	bind => [998CF97C-97BC-4E34-A442-22C1B43DD51F]
+Thu May 12 07:44:18 UTC 2016|Unknown Alarm = ABSUM317100100 Alarm Split = ABS-UM-3-1-7-100-100
+[EL Fine]: sql: 2016-05-12 07:44:18.471--ClientSession(1241807319)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_UserAccessDomain_M WHERE ((userAccessDomainId = ?) AND (versionId = ?))
+	bind => [998CF97C-97BC-4E34-A442-22C1B43DD51F, 1]
+[EL Fine]: sql: 2016-05-12 07:44:18.512--ClientSession(1903268745)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--SELECT regioncode, regionname, versionId, createdBy, createdDate, updatedBy, updatedDate, activeStatus, txnAccessCode FROM ast_SalesRegion_M WHERE (regioncode = ?)
+	bind => [E68D6D0C-CD0F-4A25-932F-A103F75B6B85]
+[EL Fine]: sql: 2016-05-12 07:44:18.515--ClientSession(1903268745)--Connection(2057571898)--Thread(Thread[Test worker,5,main])--DELETE FROM ast_SalesRegion_M WHERE ((regioncode = ?) AND (versionId = ?))
+	bind => [E68D6D0C-CD0F-4A25-932F-A103F75B6B85, 1]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

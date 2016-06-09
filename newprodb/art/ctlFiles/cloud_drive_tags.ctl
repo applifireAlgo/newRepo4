@@ -1,0 +1,2 @@
+load data infile '/tmp/applifire/db/JUOHQ8X5NQR9QK1Q97LHHG/93BD41F3-4BEA-4F89-A0C6-2B1FA7A0DCB0/art/data/cloud_drive_tags.csv' "str '#appfirenewline#'" into table cloud_drive_tags FIELDS TERMINATED BY '#appfire#' (tag_id,tag_hierachy,tag_name,tag_image,created_by,created_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',updated_by,updated_date TIMESTAMP 'yyyy-mm-dd hh24:mi:ss',version_id,active_status,app_creator_id)
+

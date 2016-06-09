@@ -1,0 +1,31 @@
+Ext.define('Newpro.newpro.shared.com.model.appinsight.health.TtwoModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "tteoId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "twonm",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "tonenm",
+          "reference": "Tone",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

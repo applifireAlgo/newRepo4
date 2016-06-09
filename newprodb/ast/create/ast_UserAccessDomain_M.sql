@@ -1,0 +1,3 @@
+CREATE TABLE ast_UserAccessDomain_M ( userAccessDomainId VARCHAR2(64)  NOT NULL, userAccessDomain NUMBER(11)  NOT NULL, domainName VARCHAR2(256)  NOT NULL, domainDescription VARCHAR2(256)  NOT NULL, domainHelp VARCHAR2(2048)  DEFAULT NULL, domainIcon VARCHAR2(256)  DEFAULT NULL, createdBy VARCHAR2(64)  DEFAULT '-1', createdDate TIMESTAMP  DEFAULT '01-Jan-2000 10:10:10', updatedBy VARCHAR2(64)  DEFAULT '-1', updatedDate TIMESTAMP  DEFAULT '01-Jan-2000 10:10:10', versionId NUMBER(11)  DEFAULT '-1', activeStatus NUMBER(1)  DEFAULT '1', txnAccessCode NUMBER  DEFAULT NULL, PRIMARY KEY (userAccessDomainId),CONSTRAINT UNQ_17ca533 UNIQUE(userAccessDomain));
+
+exit;
