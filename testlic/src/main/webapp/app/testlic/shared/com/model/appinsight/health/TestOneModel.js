@@ -1,0 +1,35 @@
+Ext.define('Testlic.testlic.shared.com.model.appinsight.health.TestOneModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "tid",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "aOne",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "aTwo",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "total",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});
